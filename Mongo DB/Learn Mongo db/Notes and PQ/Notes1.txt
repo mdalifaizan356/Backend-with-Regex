@@ -1,0 +1,39 @@
+1. Js me jo "Object" hota he wo mongo db me "Document" hota he.
+2. Js me jo "Array of Object" hota he wo mongo db me "Collection of Documents" hota he.
+3. Js me jo "Key" hota he wo mongo db me "Field or Attributes" hota he.
+4. Js me jo "Value" hota he wo mongo db me bhi "Value" hota he.
+5. Js me jo "Data Structure" hota he wo mongo db me "Database" hota he.
+6. Js me jo "Function" hota he wo mongo db me "Query" hota he.
+
+7. File System me jo "Folder" Name hota he wo mongodb me "Database" hota he.
+8. File System me jo "Sub Folder" hote he wo mongodb me "Collection" hote he.
+9. File System k sub folder me jo "Files" hongi wo mongodb me "Documents" hoti he.
+10. File System me jo "File name" hota he wo mongodb me field name hota he.
+11. File System jo "Data" hota he wo mongodb me "value" hota he.
+12. File System me jo "File operations" hote he wo mongodb me "Query" hoti he.
+
+13. Jab bhi mongodb me ek naya database banta he to empty folder ya empty database hota he jo ki
+    mongodb me allow nahi he. Isliye ek Collection banana zaruri hota he.
+14. Collection ka name plural form me hona chahiye.
+
+15 MongoDb Operator
+    $and $or $not $ne $exist $all $nin $size $gt $gte $lt $lte $eq etc...
+
+    $in==more than one true
+
+=> $all tb use karte he jb ek key k pass multiple values ho
+
+=> $exists hum tb use me lete he jab ye clear na ho ki sare data me same field of information he.
+   QK mongo db schema flexible hota to ye zaruri nahi he 2 object mai same field of information ho.
+   matlb agar ek object me name, email, phone number hai to mongo db use valid object consider
+   karta he. or agar ek bhi field of information nahi ho to bhi valid object consider karta he.
+   then at the moment bahut sari data hone k karan ye samjh pana possible nahi hota hai k sari
+   obect me same field of information he ya nahi so iske liye $exists use karte he 
+
+=> 2 tarah k and he 1.Impicit and     2 explicit end
+
+=> atleast == kam se kam (grater than equals)
+   atmost == zyada se zyada (less then equals)
+
+   gte bataye gaye number k equal or usse zyada 
+   gt bataye gaye number se zyada

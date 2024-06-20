@@ -1,0 +1,12 @@
+Aggrigation Questions in Mongodb
+
+1. Group users by role and calculate the average salary for each role.
+2. Group users by city and find the total number of users in each city.
+3. Group users by gender and determine the average age for each gender.
+4. Group users by role and city, and calculate the total salary for each subgroup.
+5. Group users by gender and city, and find the maximum salary in each subgroup.
+6. Group users by skills and count how many users have each skill.
+7. Group users by role and find the minimum age for each role.
+8. Group users by city and gender, and calculate the average salary for each subgroup.
+9. Group users by role and determine the total number of unique cities for each role.
+10. Group users by age and count the number of users in each age group.

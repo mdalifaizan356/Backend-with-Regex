@@ -1,0 +1,12 @@
+Question From Mongodb Pipeline
+
+11. Group users by city and calculate the average number of skills per user in each city.
+12. Group users by role and find the highest salary in each role.
+13. Group users by gender and calculate the total number of users for each gender.
+14. Group users by city and determine the average age for users in each city.
+15. Group users by role and gender, and calculate the average salary for each subgroup.
+16. Group users by skills and determine the total number of users for each skill.
+17. Group users by age and find the maximum salary for each age group.
+18. Group users by role and calculate the total number of users with more than three skills.
+19. Group users by gender and city, and find the average number of skills per user in each subgroup.
+20. Group users by role and determine the highest and lowest salaries for each role.

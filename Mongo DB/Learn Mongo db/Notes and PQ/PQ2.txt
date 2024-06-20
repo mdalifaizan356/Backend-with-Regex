@@ -1,0 +1,69 @@
+Mongodb Aggrigation Pipeline Questions
+
+Find all female users from Jaipur who know Python.
+    db.Users.aggregate([
+        {
+            $match: {
+                gender:"Female",
+                city:"Jaipur",
+                skills:"Python"
+            }
+        }
+    ])
+
+Find all male users in Delhi who are above age 26.
+    [
+    {
+        $match: {
+        gender:"Male",
+        city:"New Delhi",
+        age:{$gt:26}
+        }
+    }
+    ]
+
+Find all users who are from either New Delhi or Mumbai.
+    [
+    {
+        $match: {
+        city:{$in:["New Delhi","Mumbai"]}
+        }
+    }
+    ]
+
+Find all users who have the same last name.
+Panding
+
+Find the count of users in each city.
+Panding
+
+How many users are from New Delhi?
+    [
+    {
+        $match: {
+        city:"New Delhi"
+        }
+    },
+    {
+        $count: 'All Users From New Delhi'
+    }
+    ]
+
+How many Female users are from Jaipur?
+    [
+    {
+        $match: {
+        city:"Jaipur",
+        gender:"Female"
+        }
+    },
+    {
+        $count: 'All female users from jaipur'
+    }
+    ]
+
+How many Male users are there in Delhi who have skills Java?
+50.00 min
+
+How many users are from Hyderabad having age greater than 24 and have skill Python,C++
+How many female users are from Goa having age greater than 24 and have skill Python,C++

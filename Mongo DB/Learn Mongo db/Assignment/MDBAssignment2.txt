@@ -1,0 +1,241 @@
+Find all users from Mumbai who know JavaScript.
+    db.Users.aggregate([
+        {
+            $match:{
+                city: "Mumbai",
+                skills: "JavaScript"
+            }
+        }
+    ])
+
+
+Find all female users who are above age 30.
+    db.Users.aggregate([
+        {
+            $match: {
+            gender: "female",
+            age: { $gt: 30 }
+            }
+        }
+    ])
+
+
+Find all users who have the same first name.    
+    Doubtful
+
+Find the count of users for each role (admin, customer).
+    Doubtful
+
+
+How many users are from Mumbai?
+    db.Users.aggregate([
+            {
+                $match: {
+                city: "Mumbai",
+                }
+            },
+            {
+                $count='TotalUserFromMumbai'
+            }
+        ])
+
+
+How many male users are from Goa?
+    db.Users.aggregate([
+            {
+                $match: {
+                city: "Goa",
+                gender:"Male"
+                }
+            },
+            {
+                $count='TotalMaleUserFromGoa'
+            }
+        ])
+
+Find all users who have the same email domain (e.g., @gmail.com).
+    db.Users.aggregate([
+        {
+            $match: {
+            email:/@gmail.com%/
+            }
+        }
+    ])                                        Doubtful
+
+
+Find all male users from Kolkata who know Python.
+    [
+        {
+            $match: {
+                city:"Kolkata",
+                gender:"Male",
+                skills:{$all:["Python"]}
+            }
+        },
+        {
+            $count: 'All Male Python User In Kolakata'
+        }
+    ]
+
+Find all users who are from either Assam or Goa.
+    [
+    {
+        $match: {
+        city:{$in:["Assam", "Goa"]}  
+        }
+    },
+    {
+        $count: 'All User Assam or Goa'
+    }
+    ]
+
+
+Find all users who have a salary greater than 1,000,000.
+    [
+    {
+        $match: {
+            salary:{$gt:1000000}
+        }
+    },
+    {
+        $count: 'User with salary Up to 1000000'
+    }
+    ]
+
+
+Find the count of users who know Python.
+    [
+    {
+        $match: {
+            skills:"Python"
+        }
+    },
+    {
+        $count: 'All Python Users'
+    }
+    ]
+
+How many users are from Kolkata?
+    [
+    {
+        $match: {
+            city:"Kolkata"
+        }
+    },
+    {
+        $count: 'Kolkata city Users'
+    }
+    ]
+
+How many male users are from Hyderabad who know JavaScript?
+    [
+    {
+        $match: {
+        gender:"Male",
+        city:"Hyderabad",
+        skills:"Javascript"
+        }
+    },
+    {
+        $count: 'Kolkata city Users'
+    }
+    ]
+
+
+
+How many female users are from New Delhi who have a salary greater than 500,000?
+    [
+    {
+        $match: {
+        gender:"Female",
+        city:"New Delhi",
+        salary:{$gt:500000}
+        }
+    },
+    {
+        $count: 'Kolkata city Users'
+    }
+    ]
+
+
+Find all users who have the skill "Django" and are under the age of 30
+    [
+    {
+        $match: {
+        skills:"Django",
+        age:{$lt:30}
+        }
+    },
+    {
+        $count: 'Django User under age of 30'
+    }
+    ]
+
+Find all users from Assam who know Kotlin.
+    [
+    {
+        $match: {
+        city:"Assam",
+        skills:"Kotlin"
+        }
+    },
+    {
+        $count: 'Kotlin user from Assam'
+    }
+    ]
+
+Find all users who are from either Hyderabad or Jaipur.
+    [
+        {
+            $match: {
+            city:{$in:["Hyderabad", "Jaipur"]}  
+            }
+        },
+        {
+            $count: 'All User's of Hyderabad or Jaipur'
+        }
+    ]
+
+Find all female users from Mumbai who are under the age of 30.
+    [
+        {
+            $match: {
+            gender:"Female",
+                city:"Mumbai",
+            age:{$lt:30}
+            }
+        },
+        {
+            $count: 'Female From Mumbai Under age of 30'
+        }
+    ]
+
+Find all male users who know both Java and SQL.
+    [
+        {
+            $match: {
+                gender: "male",
+            skills: { $all: ["Java", "SQL"]}
+            }
+        },
+        {
+            $count: 'All Java and SQL users'
+        }
+    ]
+
+Find the count of users who have a salary less than 600,000.
+How many users are from Assam who know React?
+How many male users are from Goa who are above the age of 25?
+Find all users who have a first name that starts with "A".
+How many female users are from Kolkata who know both Django and SQL?
+Find all users who have the role "admin" and are from New Delhi.
+Find all male users from Hyderabad who know Node.js.
+Find all female users from Kolkata who are above age 25.
+Find all users from Delhi who have a salary greater than 800,000.
+Find all users who know both Java and Python.
+Find the count of users who are under the age of 30.
+How many female users are from Mumbai who know C++?
+How many male users from Assam have a salary less than 500,000?
+Find all users who have the last name "Sharma" and are from Jaipur.
+How many users from Goa know both HTML and CSS?
+Find all users who are from either Hyderabad or Kolkata and know JavaScript.

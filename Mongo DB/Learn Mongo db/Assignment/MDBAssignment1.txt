@@ -1,0 +1,91 @@
+Find all products in the "Food" category.
+    db.products.find({category:"Food"})
+    db.products.find({category:"Food"}).count      Total docoment of Food category is 8
+
+Find all products with a rating of 4.7 or higher.
+    db.products.find({rating:{$gte:4.7}})
+
+Find all products where the new price is less than $5.00.
+    db.products.find({new_price:{$lt:416}})                     confusion
+
+Find all products that are available in "Blue" color.
+    db.products.find({colors:"Blue"})
+
+Find all products in the "Electronics" category with a rating of 4.8.
+    db.products.find({category:"Electronics", rating:"4.8"})
+
+Find all products that have a quantity greater than 100.
+    db.products.find({product_qty:{$gt:100}})
+
+Find all products with an old price greater than $50.00.
+    db.products.find({old_price:{gt:50}})                      confusion
+
+Find all products in the "Health" category.
+    db.products.find({category:"Health"})
+
+Find all products with a "sub_category" of "Snacks".
+    db.products.find({sub_category:"Snacks"})
+
+Find all products that have a discount of more than $10.00 (difference between old and new price).
+    Doubtful
+
+Find all products with a rating less than 4.5.
+    db.products.find({rating:{$lt:4.5}})
+
+Find all products that are available in "Red" color.
+    db.products.find({colors:"Red"})
+
+Find all products in the "Fruits" sub-category.
+    db.products.find({sub_category:"Fruits"})
+
+Find all products with a "product_qty" less than 30.
+    db.products.find({product_qty:{$lt:30}})
+
+Find all products where the old price is between $50.00 and $100.00.
+    db.products.find({old_price:{gte:50, $lte:100}})
+
+Find all products in the "Smartphones" sub-category.
+    db.products.find({sub_category:"Smartphones"})
+
+Find all products with a new price greater than $1000.00.
+    db.products.find({new_price:{$gt:1000}})
+
+
+Find all products that are available in multiple colors.
+    Doubtful
+
+Find all products with the word "shampoo" in their description.
+    db.products.find({description:/shampoo/})
+
+Find all products that have a rating between 4.4 and 4.6 inclusive.
+    db.products.find({rating:{gte:4.4, $lte:4.6}})
+
+Find all products with a name containing the word "Pro".
+    db.products.find({name:/Pro/})
+
+Find all products that have a "sub_category" of "Hair Care".
+    db.products.find({sub_category:"Hair Care"})
+
+Find all products in the "Dairy" sub-category.
+    db.products.find({sub_category:"Dairy"})
+
+Find all products where the new price is exactly $1.00.
+    db.collectionname.find({new_price:1})
+
+Find all products with a "sub_category" of "Oral Care".
+     db.products.find({sub_category:"Oral Care"})
+
+Find all products with a rating of 4.9.
+    db.products.find({rating:4.9})
+
+Find all products that are available in both "Black" and "Silver" colors.
+    db.products.find({colors:["Black", "Silver"]})
+
+Find all products in the "Beverages" sub-category.
+    db.products.find({sub_category:"Beverages"})
+
+Find all products that have more than 3 colors available.
+    Doubtful
+
+Find all products with a name starting with the letter "L".
+    db.products.find({name:/^L/})

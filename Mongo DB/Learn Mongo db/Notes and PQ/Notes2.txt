@@ -1,0 +1,38 @@
+Sharding
+
+=>For all the filter queries we use to find method.
+=>Find method pure document me use hota he.
+=>Iska Matlab hai ki har ek document apne aap me seperate document he. Un document me jo bhi key
+  value pair particular condition ko match kar rhi he un sabhi document ko filter kar k laane ka
+  kaam Find method karta he.
+
+Aggrigation Pipeline
+    Documents ka group karenge fir usme se data k sath manipulate karenge.
+    Pipeline means ek sath multiple manipulation karna
+    Pipeline ki practice mongodb k platform pr hi hota he
+
+    
+    mongodb is having object id with itself which makes all the document unique. It has no such
+    problem primary key, secondry key, candidate key etc...
+
+    mongodb is scalable:
+                        mongodb store data either of the two methods one is vertical scalable
+                        method and other one is horizontal scalable method.
+
+    system design me ek part hota he scaling
+    sharding: vertical sharding me memory ki size bdhate he
+              horizontal sharding me memory ko divide karte he.
+
+
+    Aggrigation pipeline command operator
+                                        $match == Find
+                                        $group == For use document grouping
+                                        $projection == jab hme limited keys dikhane k liye
+                                        $unwind == array ko todne k liye
+
+System Design: Database, Software, Webapp, Website follow 2 types architecture
+  1. Monolithic Architecture : Find, vertical scaling
+  2. Distributive Architecture: Aggrigation pipeline, horizontal scaling
+
+
+

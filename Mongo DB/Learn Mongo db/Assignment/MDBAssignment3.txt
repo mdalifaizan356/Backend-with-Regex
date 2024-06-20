@@ -1,0 +1,8 @@
+Test Assignment Questions
+
+How many male users are from Hyderabad who know JavaScript?
+How many female users are from New Delhi who have a salary greater than 500,000?
+Find all users who have the skill "Django" and are under the age of 30
+Find all users from Assam who know Kotlin.
+Find all users who are from either Hyderabad or Jaipur.
+Find all female users from Mumbai who are under the age of 30.
