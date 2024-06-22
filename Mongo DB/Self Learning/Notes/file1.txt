@@ -1,0 +1,26 @@
+MongoDB is an open-source, document-oriented NoSql database management system.
+
+Document-Oriented database also known as Document database or a document store. It is store data
+and information in document.
+
+It is designed for flexibility, Scalability and performance in handling Unstructured or
+Semi-Structured data.
+
+It was created by a company called 10gen. Which is now known as MongoDB,inc. The company was
+founded by Eliot Horowitz and Dwight Merriman in 2007. The first version of MongoDB was released
+in 2009.
+
+HUMONGOUS k name se mongo name pdha he.
+
+SQL vs MongoDB:
+SQL:
+    SQL database are relational databases.
+    They use structured tables to store data in rows and columns.
+    Suitable for applications with well-defined schemas and fixed data structures.
+    Eg: MySQL, PostgreSQL, Oracle.
+
+MongoDB
+        NoSQL database are non-relational databases.
+        They Provide flexibility in data-storage, allowing varied data types and structures.
+        
+

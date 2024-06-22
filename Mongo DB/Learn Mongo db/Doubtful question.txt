@@ -1,0 +1,21 @@
+1.Find the count of users in each city.
+    [
+    {
+        $group: {
+        _id: "$city",
+        countUser:{$sum:1}           1 kis liye use kiya.
+        }
+    }
+    ]
+
+2.Find all users who have the same last name.
+    [
+    {
+        $group: {
+        _id: "$lastName",
+        countUser:{$sum:1},
+        users:{$push:"$$ROOT"}      $$ROOT kya he
+        }
+    }
+    ]
+    ROOT Keyword he. or $$ ka use isliye kiya qk ye group ka second statge he.

@@ -32,10 +32,25 @@ Find all users who are from either New Delhi or Mumbai.
     ]
 
 Find all users who have the same last name.
-Panding
+    [
+    {
+        $group: {
+        _id: "$lastName",
+        countUser:{$sum:1},
+        users:{$push:"$$ROOT"}
+        }
+    }
+    ]
 
 Find the count of users in each city.
-Panding
+    [
+    {
+        $group: {
+        _id: "$city",
+        countUser:{$sum:1}
+        }
+    }
+    ]
 
 How many users are from New Delhi?
     [
@@ -62,8 +77,57 @@ How many Female users are from Jaipur?
     }
     ]
 
-How many Male users are there in Delhi who have skills Java?
-50.00 min
+How many Male users are there in Delhi who have skills Python?
+    [
+    {
+        $match: {
+        city:"New Delhi",
+        gender:"Male",
+        skills:"Python"
+        }
+    },
+    {
+        $count: 'Male Python user from New Delhi '
+    }
+    ]
 
-How many users are from Hyderabad having age greater than 24 and have skill Python,C++
+How many users are from Hyderabad having age greater than 24 and have skill Java,C++
+    [
+    {
+        $match: {
+        city:"Hyderabad",
+        age:{$gt:24},
+        skills:{$all:["C++","Java"]}
+        }
+    },
+    {
+        $count: 'Hyderabad user age greater than 24 with C++ and Java Skills '
+    }
+    ]
+
+
 How many female users are from Goa having age greater than 24 and have skill Python,C++
+    [
+    {
+        $match: {
+        gender:"Female",
+        city:"Goa",
+        age:{$gt:24},
+        skills:{$all:["C++","Python"]}
+        }
+    },
+    {
+        $count: 'Female user from Goa and age greater than 24 with C++ and Python Skills '
+    }
+    ]
+
+Find all users based on gender.
+    [
+    {
+        $group: {
+        _id: "$gender",
+        countUser:{$sum:1},
+        users:{$push:"$$ROOT"}
+        }
+    }
+    ]

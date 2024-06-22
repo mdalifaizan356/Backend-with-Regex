@@ -36,3 +36,24 @@ System Design: Database, Software, Webapp, Website follow 2 types architecture
 
 
 
+Groups
+
+grouping can be done on the basis of any Key. 
+$avg ka use kar k hum average nikal sakte he.
+
+kuch ka group karna grouping or grouping k baad kuch kaam karna that is called pipeline
+
+composit key: It is the combination of more than one objects key. like
+[
+    {
+        $group: {
+        _id: ["$city", "$role"],          composit key
+        }
+        }
+    ]
+
+
+Array unwind:
+array tb unwind kiya jata he jab array k har element ki need ho.
+sirf size pata karna ho to array unwind ki zarurat nahi. project ko group se pehle kar k size 
+pata kar sakte he.

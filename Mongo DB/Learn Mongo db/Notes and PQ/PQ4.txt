@@ -1,8 +1,47 @@
 Question From Mongodb Pipeline
 
 11. Group users by city and calculate the average number of skills per user in each city.
+    [
+        {
+            $project: {
+            city:1,
+            numberOfSKills:{$size:"$skills"}
+            }
+        },
+        {
+            $group: {
+            _id:"$city",
+            avgSkills:{$avg:"$numberOfSKills"}
+            }
+        },
+        {
+            $project:{
+            city:"$_id",
+            avgSkills:1
+            }
+        }
+    ]
+
 12. Group users by role and find the highest salary in each role.
+    [
+    {
+        $group: {
+        _id:"$role",
+        maxSalary:{$max:"$salary"}
+        }
+    }
+    ]
+
 13. Group users by gender and calculate the total number of users for each gender.
+    [
+    {
+        $group: {
+        _id:"$gender",
+        totalUser:{$sum:1}
+        }
+    }
+    ]
+    
 14. Group users by city and determine the average age for users in each city.
 15. Group users by role and gender, and calculate the average salary for each subgroup.
 16. Group users by skills and determine the total number of users for each skill.
