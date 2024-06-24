@@ -1,0 +1,81 @@
+Test Assignment Questions
+
+How many male users are from Hyderabad who know JavaScript?
+[
+  {
+    $match:{
+      gender:"Male",
+      city:"Hyderabad",
+      skills: "JavaScript"
+    }
+  },
+  {
+    $count: 'Result is'
+  }
+]
+
+How many female users are from New Delhi who have a salary greater than 500,000?
+    [
+    {
+        $match:{
+        gender:"Female",
+        city:"New Delhi",
+        salary:{$gt:500000}
+        }
+    },
+    {
+        $count: 'Result is'
+    }
+    ]
+
+Find all users who have the skill "Django" and are under the age of 30
+    [
+    {
+        $match:{
+        skills:"Django",
+        age:{$lt:30}
+        }
+    },
+    {
+        $count: 'Result is'
+    }
+    ]
+
+Find all users from Assam who know Kotlin.
+    [
+    {
+        $match:{
+        city:"Assam",
+        skills:"Kotlin",
+        }
+    },
+    {
+        $count: 'Result is'
+    }
+    ]
+
+Find all users who are from either Hyderabad or Jaipur.
+    [
+    {
+        $match:{
+        city:{"$in":["Hyderabad", "Jaipur"]}
+        }
+    },
+    {
+        $count: 'Result is'
+    }
+    ]
+
+Find all female users from Mumbai who are under the age of 30.
+    [
+    {
+        $match:{
+        gender:"Female",
+        city:"Mumbai",
+        age:{$lt:30},
+        }
+    },
+    {
+        $count: 'Result is'
+    }
+    ]

@@ -370,8 +370,69 @@ Find the count of users who are under the age of 30.
     ]
 
 How many female users are from Mumbai who know C++?
+    [
+        {
+            $match:{
+                gender:"Female",
+            city:"Mumbai",
+            skills:"C++"
+            }
+        },
+        {
+            $count: 'Result is'
+        }
+    ]
 
 How many male users from Assam have a salary less than 500,000?
+    [
+        {
+            $match:{
+                gender:"Male",
+            city:"Assam",
+            salary:{$lt:500000}
+            }
+        },
+        {
+            $count: 'Result is'
+        }
+    ]
+
 Find all users who have the last name "Sharma" and are from Jaipur.
+    [
+        {
+            $match:{
+                lastName:"Sharma",
+            city:"Jaipur",
+            }
+        },
+        {
+            $count: 'Result is'
+        }
+    ]
 How many users from Goa know both HTML and CSS?
+    [
+        {
+            $match:{
+            city:"Goa",
+            skills:{$all:["HTML", "CSS"]}
+            }
+        },
+        {
+            $count: 'Result is'
+        }
+    ]
+
 Find all users who are from either Hyderabad or Kolkata and know JavaScript.
+    [
+        {
+            $match:{
+            city:{$in:["Hyderabad", "Kolkata"]},
+                skills: "JavaScript"
+            }
+        },
+        {
+            $count: 'Result is'
+        }
+    ]
+
+

@@ -160,7 +160,12 @@ Read Operations in MongoDB:
 
 
     Complex expression
-    field k sath $ lagana aniwarya
+        The $exp operator allows using aggregtion expressions within a query.
+        Usful when you need to compare fields from the same document in a more complex manner.
+
+        Syntax
+                {$exp:{operator:[$field:, value]}}
+                field k sath $ lagana necessary he.
 
     
 
