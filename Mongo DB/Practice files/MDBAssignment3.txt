@@ -9,8 +9,20 @@
     ]
     
 2. Group users by city and find the user with the highest number of skills in each city.
+    Doubtful
+    
 3. Group users by role and determine the average age for each role.
+    [
+    {
+        $group: {
+        _id: "$role",
+        avgAge:{$avg:"$age"}
+        }
+    }
+    ]
+
 4. Group users by skills and calculate the average salary for users with each skill.
+    
 5. Group users by gender and role, and find the total number of users in each subgroup.
 6. Group users by city and determine the total number of users in each city.
 7. Group users by role and calculate the average number of skills per user in each role.

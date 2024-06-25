@@ -1,0 +1,56 @@
+//Assignment of 25th June 2024
+
+//1. aapko arrow function ke madad se 4 input lena hai aur uska sum calculate karna hai.
+
+    const sum=(num1,num2,num3,num4)=>{
+        return (num1+num2+num3+num4);
+    };
+    console.log(sum(4,3,2,1));
+
+
+//2. using annoymous arrow function create a function which does factorial of 5.
+
+    const factorial = (num) => {
+        if (num === 0 || num === 1) {
+        return 1;
+        }
+        return num * factorial(num - 1);
+    }
+    console.log(factorial(5));
+
+
+//3. use the concept of hoisiting and call a factorial function without declaring it and then define after calling
+
+    //It does not work with the help of arrow and ananomous fxn
+    console.log(factorial(5));                       //calling
+    function factorial(num){
+        if (num === 0 || num === 1) {
+                return 1;
+                }
+                return num * factorial(num - 1);      //Fxn definition
+        };
+
+
+//4. use the concept of immediately invoked function to check whether a number is even or odd. 
+
+    let EvenOdd=((num1)=>{
+        if(num1%2==0){
+            return ("It is Even");
+        }
+        else{
+            return ("It is Odd");
+        }
+    })(2);
+    console.log(EvenOdd);
+
+
+//5. using the concept of parameterised function constructor call factorial function
+
+    function factorial(num){
+        this.num=num;
+        if (num === 0 || num === 1) {
+                return 1;
+                }
+                return num * factorial(num - 1);
+        };
+        console.log(factorial(6));                  

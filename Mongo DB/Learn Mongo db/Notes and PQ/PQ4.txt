@@ -21,7 +21,7 @@ Question From Mongodb Pipeline
             }
         }
     ]
-
+ 
 12. Group users by role and find the highest salary in each role.
     [
     {
