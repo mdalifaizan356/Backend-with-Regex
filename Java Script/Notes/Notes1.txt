@@ -1,0 +1,14 @@
+Call Stack In Javascript: Memory me function kaise jayenge or kaise execute honge or
+                          kaise usse bahar aayenge.
+
+Javascript Execution Context:
+    Brwoser and Node ka Execution Context different hota.
+
+    Brwoser ka Execution Context me "this" ki value window object aati he.
+
+    Execution Context is divide Code in two parts
+        1. Global Execution Context: This veribale k undar GEC ko rakh diya jata he.
+        2. Function Execution Context:
+        3. Eval Execution Context: Ye mongose me hota. 
+
+
