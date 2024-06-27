@@ -1,14 +1,64 @@
-Call Stack In Javascript: Memory me function kaise jayenge or kaise execute honge or
-                          kaise usse bahar aayenge.
+In JavaScript, both the rest and spread operators use the same syntax (...). However, they are used in different contexts and serve different purposes. Rest Operator
+The rest operator allows you to represent an indefinite number of arguments as an array. It is used in function parameter definitions and destructuring assignments to collect remaining elements.Usage in Function Parameters
+The rest operator can be used to gather all remaining arguments of a function into an array.
 
-Javascript Execution Context:
-    Brwoser and Node ka Execution Context different hota.
+function sum(...numbers) 
+{
+return numbers.reduce((total, number) => total + number, 0); 
+} 
+ console.log(sum(1, 2, 3, 4)); // Output: 10
 
-    Brwoser ka Execution Context me "this" ki value window object aati he.
+Usage in Destructuring
 
-    Execution Context is divide Code in two parts
-        1. Global Execution Context: This veribale k undar GEC ko rakh diya jata he.
-        2. Function Execution Context:
-        3. Eval Execution Context: Ye mongose me hota. 
+The rest operator can also be used to collect the remaining elements of an array or properties of an object into a new array or object.
 
 
+
+
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+
+
+
+const {a, b, ...rest} = {a: 1, b: 2, c: 3, d: 4};
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(rest); // Output: {c: 3, d: 4}
+
+Spread Operator
+The spread operator allows you to expand elements of an array or object into individual elements. It is used to spread elements in function calls, array literals, or object literals.
+Usage in Function Calls
+The spread operator can be used to pass elements of an array as arguments to a function.
+
+const numbers = [1, 2, 3, 4]; 
+console.log(Math.max(...numbers)); // Output: 4
+
+Usage in Array Literals
+The spread operator can be used to create a new array by spreading elements of an existing array.
+
+1)const arr1 = [1, 2, 3]; 
+    const arr2 = [...arr1, 4, 5];
+    console.log(arr2); // Output: [1, 2, 3, 4, 5]
+
+
+2) function multiply(a, b, c) {
+    return a * b * c;
+}
+
+const numbers = [2, 3, 4];
+const result = multiply(...numbers);
+console.log(result); // Output: 24
+Usage in Object Literals
+The spread operator can be used to create a new object by spreading properties of an existing object.
+
+const obj1 = {a: 1, b: 2}; 
+const obj2 = {...obj1, c: 3}; 
+console.log(obj2); // Output: {a: 1, b: 2, c: 3}
+
+Key Differences
+The rest operator is used in function parameters and destructuring assignments.
+The spread operator is used in function calls, array literals, and object literals.
+The rest operator collects multiple elements into an array.
+The spread operator expands an array or object into individual elements.

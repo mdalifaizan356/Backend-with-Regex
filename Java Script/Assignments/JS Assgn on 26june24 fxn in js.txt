@@ -1,27 +1,140 @@
-/* 
 Question 1
 User se 4 input lena hai, inka sum nikalna hai. Agar sum > 100 hota hai to ek function call
 karna hai, jisme 3 input lena hai aur unka average return karna hai. Agar returned average > 50
 hai to ek aur function call karke factorial nikalna hai aur check karna hai wo prime number hai
 ya nahi.
- 
+
+    let n1=90, n2=80, n3=10, n4=5;
+    let sum=n1+n2+n3+n4;
+
+    function avg(num1, num2, num3){
+            return (num1+num2+num3)/3;
+    }
+
+    function factorial(avgValue){
+                if (avgValue === 0 || avgValue === 1) {
+                return 1;
+                }
+                else{
+                    return avgValue * factorial(avgValue - 1);
+                }
+            }
+
+    function primenumber(factVal){
+    if (factVal <= 1) return false;
+    for (let i = 2; i * i <= factVal; i++) {
+        if (factVal % i == 0) return false;
+    }
+    return true;
+    };
+
+    if(sum>100){
+        var avgVal=avg(60,80,70);
+        console.log(`${avgVal} is Average Value` );
+        if(avgVal>50){
+        var factVal = factorial(avgVal);
+        console.log(`${factVal} is Factorial of Average Value`);
+        var prime=primenumber(factVal);
+        // console.log(`${prime} is Factorial of Average Value`);
+        if(prime==true){
+            console.log("Yes Prime number")
+        }
+        else{
+            console.log("Not Prime number")
+        }
+        }
+    }
+
 User se 2 input lena hai, inka product nikalna hai. Agar product < 50 hota hai to ek function
 call karna hai, jisme product aur ek user input ko add karna hai aur result ko return karna hai
 Agar returned value odd hai to ek aur function call karke us value ko square karna hai aur
 result return karna hai.
 
+    let n1=9, n2=2;
+    let product=n1*n2;
+
+    const AddwithProduct=(product, n1)=>{
+    return product+n1;
+    }
+
+    const square =(valueAddwithProduct)=>{
+    return valueAddwithProduct*valueAddwithProduct;
+    }
+
+    if(product<50){
+    var valueAddwithProduct=AddwithProduct(product, n1);
+    if(valueAddwithProduct%2!=0){
+        console.log(square(valueAddwithProduct));
+    }
+    }
+
+
 Question 2
 User se 6 input lena hai, inka maximum nikalna hai. Agar maximum > 75 hota hai to ek function
 call karna hai, jisme maximum aur 2 user inputs ko subtract karna hai aur result return karn
 hai. Agar result negative hai to absolute value nikal kar factorial return karna hai.
+
+    let n1=5, n2=80, n3=20, n4=5, n5=6, n6=2;
+    let subVar1=10, subVar2=80;
+    let max=Math.max(n1,n2,n3,n4,n5,n6);
+    console.log(`${max} is maximum value`)
+
+    const subtract = (max, subVar1,subVar2)=>{
+    return (max-subVar1-subVar2);
+    }
+
+    function factorial(subtractVal){
+    if (subtractVal === 0 || subtractVal === 1) {
+    return 1;
+    }
+    else{
+        return subtractVal * factorial(subtractVal - 1);
+    }
+    }
+
+    if(max>75){
+    let subtractVal=subtract(max, subVar1,subVar2)
+    console.log(`${subtractVal} is subtract value of max and 2 user input`);
+    if(subtractVal<0){
+        console.log(`${Math.abs(subtractVal)} is absolute value of negative subtract value`);
+        console.log(factorial(subtractVal));
+    }
+    }
+
+
+
 User se 3 input lena hai, inka sum nikalna hai. Agar sum 0 hota hai to ek function call karna
 hai aur check karna hai ki wo perfect square hai ya nahi. Agar perfect square hai to uska square
 root nikalna hai aur result return karna hai.
+
+    let n1=0, n2=0, n3=0
+    let sum =n1+n2+n3;
+    console.log(sum);
+
+    const perfectSquare=(sum)=>{
+        let sqrt = Math.sqrt(sum);
+        return (sqrt % 1 === 0);
+    }
+
+
+    if(sum===0){
+    if(perfectSquare(sum=true)){
+        console.log(Math.sqrt(sum));
+
+    };
+    }
+
+
 
 Question 3
 User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek function call
 karna hai, jisme 3 input lena hai aur unka product return karna hai. Agar product even hai to
 uska half return karna hai, agar odd hai to uska double return karna hai.
+
+
+
+
+
 
 User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call 
 karna hai aur minimum ko 5 se multiply karna hai aur result return karna hai. Agar result > 50 
