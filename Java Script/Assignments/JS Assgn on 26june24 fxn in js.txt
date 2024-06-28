@@ -131,14 +131,55 @@ User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek 
 karna hai, jisme 3 input lena hai aur unka product return karna hai. Agar product even hai to
 uska half return karna hai, agar odd hai to uska double return karna hai.
 
+let n1=60,n2=80,n3=70,n4=40,n5=60;
+let avg=(n1+n2+n3+n4+n5)/5;
+console.log(avg);
 
+    const product = (p1, p2, p3)=>{
+    return p1*p2*p3;
+    }
 
-
-
+    if(avg>60){
+    let productVal = product(6, 2, 2);
+    console.log(productVal)
+    if(productVal % 2==0){
+        console.log(productVal/2);
+    }
+    else{
+        console.log(productVal*2);
+    }
+    }
 
 User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call 
 karna hai aur minimum ko 5 se multiply karna hai aur result return karna hai. Agar result > 50 
 hai to factorial nikalna hai aur result return karna hai.
+
+    let n1=40,n2=9,n3=20,n4=12;
+    let min = Math.min(n1,n2,n3,n4);
+    console.log(min);
+
+    const mul = (min)=>{
+    return min*5;
+    }
+
+    function factorial(result){
+    if (result === 0 || result === 1) {
+    return 1;
+    }
+    else{
+        return result * factorial(result - 1);
+    }
+    }
+
+    if(min<10){
+    console.log(mul(min));
+    let result = mul(min)
+    if(result>40){
+        console.log(factorial(result));
+    }
+    }
+
+
 
 Question 4
 User se 3 input lena hai, unka sum nikalna hai. Agar sum > 80 hai to ek function call karna hai,

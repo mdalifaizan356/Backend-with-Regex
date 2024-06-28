@@ -1,0 +1,27 @@
+[
+    {"make": "Toyota", "model": "Camry", "year": 2018, "price": 18000, "features": ["Air Conditioning", "Bluetooth", "Backup Camera"]},
+    {"make": "Honda", "model": "Civic", "year": 2020, "price": 20000, "features": ["Air Conditioning", "Bluetooth", "Navigation System"]},
+    {"make": "Ford", "model": "F-150", "year": 2017, "price": 25000, "features": ["Air Conditioning", "4WD", "Backup Camera"]},
+    {"make": "Chevrolet", "model": "Malibu", "year": 2019, "price": 19000, "features": ["Air Conditioning", "Bluetooth", "Heated Seats"]},
+    {"make": "Nissan", "model": "Altima", "year": 2021, "price": 24000, "features": ["Air Conditioning", "Bluetooth", "Sunroof"]},
+    {"make": "BMW", "model": "X5", "year": 2016, "price": 30000, "features": ["Air Conditioning", "Bluetooth", "Navigation System"]},
+    {"make": "Audi", "model": "A4", "year": 2015, "price": 22000, "features": ["Air Conditioning", "Bluetooth", "Leather Seats"]},
+    {"make": "Mercedes", "model": "C-Class", "year": 2017, "price": 28000, "features": ["Air Conditioning", "Bluetooth", "Backup Camera"]},
+    {"make": "Kia", "model": "Sorento", "year": 2018, "price": 21000, "features": ["Air Conditioning", "Bluetooth", "4WD"]},
+    {"make": "Hyundai", "model": "Sonata", "year": 2019, "price": 19500, "features": ["Air Conditioning", "Bluetooth", "Heated Seats"]},
+    {"make": "Tesla", "model": "Model 3", "year": 2021, "price": 35000, "features": ["Air Conditioning", "Bluetooth", "Autopilot"]},
+    {"make": "Ford", "model": "Mustang", "year": 2019, "price": 27000, "features": ["Air Conditioning", "Bluetooth", "Backup Camera"]},
+    {"make": "Toyota", "model": "RAV4", "year": 2018, "price": 23000, "features": ["Air Conditioning", "Bluetooth", "Navigation System"]},
+    {"make": "Honda", "model": "Accord", "year": 2020, "price": 25000, "features": ["Air Conditioning", "Bluetooth", "Sunroof"]},
+    {"make": "Chevrolet", "model": "Impala", "year": 2016, "price": 17000, "features": ["Air Conditioning", "Bluetooth", "Backup Camera"]},
+    {"make": "BMW", "model": "3 Series", "year": 2017, "price": 29000, "features": ["Air Conditioning", "Bluetooth", "Leather Seats"]},
+    {"make": "Audi", "model": "Q5", "year": 2018, "price": 33000, "features": ["Air Conditioning", "Bluetooth", "Navigation System"]},
+    {"make": "Mercedes", "model": "E-Class", "year": 2019, "price": 35000, "features": ["Air Conditioning", "Bluetooth", "Sunroof"]},
+    {"make": "Kia", "model": "Optima", "year": 2021, "price": 22000, "features": ["Air Conditioning", "Bluetooth", "Backup Camera"]},
+    {"make": "Hyundai", "model": "Elantra", "year": 2020, "price": 18000, "features": ["Air Conditioning", "Bluetooth", "Heated Seats"]}
+]
+
+
+
+
+How would you find all vehicles with a price less than $20,000?How can you filter vehicles that are made by "Toyota"?How do you retrieve all vehicles manufactured after the year 2015?What query would you use to find vehicles that have "Bluetooth" as a feature?How do you find the most expensive vehicle in the collection?How can you count the number of vehicles made by "Honda"?What is the MongoDB query to find all vehicles with both "Air Conditioning" and "Backup Camera" features?How would you find vehicles that are either "Toyota" or "Ford"?How do you update the price of a specific vehicle (e.g., make: "Toyota", model: "Camry")?How can you delete vehicles that are older than the year 2010?How do you sort the vehicles by price in descending order?How can you calculate the average price of all vehicles?What query would you use to group vehicles by make and count the number of vehicles in each group?How do you find vehicles with a "Navigation System" but exclude those with "Backup Camera"?How would you find all vehicles within a specific price range (e.g., $15,000 to $25,000)?How can you retrieve only the make and model of all vehicles?What is the MongoDB query to find vehicles made by either "Toyota" or "Honda" and sort them by year in ascending order?How do you find the total number of distinct makes in the collection?How would you find the average price of vehicles grouped by year?How can you filter vehicles that are made by "Ford"?
