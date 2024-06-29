@@ -1,15 +1,10 @@
- // // Function call
-  // const user = {
-  //     "id": "1",
-  //     "username": "Prajjal Dhar",
-  //     "useremail": "prajjal.dhar@gmail.com",
-  //     "password": "Regex1234",
-  //     "firstName": "Prajjal",
-  //     "lastName": "Dhar",
-  //     "role": "admin",
-  //     "gender": "Male",
-  //     "age": 28,
-  //     "city": "Goa",
-  //     "salary": 300000,
-  //     "skills": ["Java", "Python"]
-  // };
+    objects.forEach((object) => {
+      console.log(object);
+    });
+  };
+  
+  const obj1 = { name: "Alice" };
+  const obj2 = { name: "kartika" };
+  const obj3 = { name: "Piru" };
+  
+  printobject(obj1, obj2, obj3);

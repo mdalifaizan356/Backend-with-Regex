@@ -1,0 +1,260 @@
+object      
+        JavaScript mein, object ek collection hota hai key-value pairs ka, jisme keys strings
+        (ya symbols) aur values kisi bhi type ki ho sakti hain (jaise strings, numbers, arrays,
+        functions, aur dusre objects). Object ek unordered collection hota hai aur data ko 
+        structured tarike se store karne ke liye use hota hai.
+
+Create Object 
+                Object ko create karne ke kai tarike hain. Niche kuch examples diye gaye hain
+
+1. Object Literal Syntax:
+                            const user = {
+                            id: "1",
+                            username: "Prajjal Dhar",
+                            age: 28,
+                            skills: ["Java", "Python"]
+                            };
+
+
+
+2. Using the new Object() Syntax:
+                                    const user = new Object();
+                                    user.id = "1";
+                                    user.username = "Prajjal Dhar";
+                                    user.age = 28;
+                                    user.skills = ["Java", "Python"];
+
+
+
+3. Using a Constructor Function:
+                        function User(id, username, age, skills) {
+                        this.id = id;
+                        this.username = username;
+                        this.age = age;
+                        this.skills = skills;
+                        }
+
+                        const user = new User("1", "Prajjal Dhar", 28, ["Java", "Python"]);
+
+
+
+4. Using the Object.create() Method:
+                                        const userPrototype = {
+                                        getFullName: function() {
+                                            return `${this.firstName} ${this.lastName}`;
+                                        }
+                                        };
+
+                                        const user = Object.create(userPrototype);
+                                        user.id = "1";
+                                        user.username = "Prajjal Dhar";
+                                        user.useremail = "prajjal.dhar@gmail.com";
+                                        user.password = "Regex1234";
+                                        user.firstName = "Prajjal";
+                                        user.lastName = "Dhar";
+                                        user.role = "admin";
+                                        user.gender = "Male";
+                                        user.age = 28;
+                                        user.city = "Goa";
+                                        user.salary = 300000;
+                                        user.skills = ["Java", "Python"];
+
+
+                                    
+5. Class Syntax (ES6):
+JavaScript ES6 mein, aap class syntax ka use karke objects bana sakte hain. Class ek blueprint
+hota hai objects banane ke liye.
+                            class User {
+                            constructor(id, username, age, skills) {
+                                this.id = id;
+                                this.username = username;
+                                this.age = age;
+                                this.skills = skills;
+                            }
+
+                            getFullName() {
+                                return `${this.firstName} ${this.lastName}`;
+                            }
+                            }
+
+                            const user = new User("1", "Prajjal Dhar", 28, ["Java", "Python"]);
+                            console.log(user.getFullName()); // Output: Prajjal Dhar
+
+
+
+6. Factory Function:
+Factory function ek function hota hai jo naya object return karta hai. Ye class ki tarah kaam
+karta hai, par ye ek simpler tarika hai.
+
+                            function createUser(id, username, age, skills) {
+                            return {
+                                id,
+                                username,
+                                age,
+                                skills,
+                                getFullName() {
+                                return `${this.firstName} ${this.lastName}`;
+                                }
+                            };
+                            }
+
+                            const user = createUser("1", "Prajjal Dhar", 28, ["Java", "Python"]);
+                            console.log(user.getFullName()); // Output: Prajjal Dhar
+
+
+7.  Using Object.assign():
+Object.assign() method ka use existing objects ko merge karne ya new object create karne ke liye
+kiya ja sakta hai.
+
+                        const user = Object.assign({}, {
+                        id: "1",
+                        username: "Prajjal Dhar",
+                        age: 28,
+                        skills: ["Java", "Python"]
+                        });
+
+                        console.log(user.username); // Output: Prajjal Dhar
+
+
+8. Using Object Spread Operator (ES6):
+Object spread operator ka use karke aap easily objects ko copy ya merge kar sakte hain.
+
+            const user = {
+            id: "1",
+            username: "Prajjal Dhar",
+            age: 28,
+            skills: ["Java", "Python"]
+            };
+
+            const newUser = { ...user, age: 29 }; // newUser is a copy of user with age updated
+            console.log(newUser.age); // Output: 29
+
+
+
+
+
+
+
+9. Using Object.fromEntries():
+Object.fromEntries() method ka use key-value pairs se object banane ke liye hota hai.
+
+                                    const entries = [
+                                    ['id', '1'],
+                                    ['username', 'Prajjal Dhar'],
+                                    ['age', 28],
+                                    ['skills', ['Java', 'Python']]
+                                    ];
+                                    const user = Object.fromEntries(entries);
+                                    console.log(user);
+
+
+
+10. Using JSON (JavaScript Object Notation):
+JSON ek format hai jo structured data ko represent karne ke liye use hota hai. Aap JSON string
+ko parse karke object bana sakte hain.
+
+const jsonString = `{
+  "id": "1",
+  "username": "Prajjal Dhar",
+  "age": 28,
+  "skills": ["Java", "Python"]
+}`;
+const user = JSON.parse(jsonString);
+console.log(user);
+
+
+
+11. Using Proxies:
+Proxy objects allow you to customize the behavior of an object at the time of interaction.
+
+const handler = {
+  get: function(target, prop, receiver) {
+    return prop in target ? target[prop] : `Property ${prop} does not exist`;
+  }
+};
+
+const user = new Proxy({
+  id: "1",
+  username: "Prajjal Dhar",
+  age: 28,
+  skills: ["Java", "Python"]
+}, handler);
+
+console.log(user.username); // Output: Prajjal Dhar
+console.log(user.nonExistentProperty); // Output: Property nonExistentProperty does not exist
+
+
+
+12. Using Map:
+Although Map is not exactly the same as an object, it can store key-value pairs and offers 
+some advantages like maintaining the order of keys.
+
+const userMap = new Map();
+userMap.set('id', '1');
+userMap.set('username', 'Prajjal Dhar');
+userMap.set('age', 28);
+userMap.set('skills', ['Java', 'Python']);
+
+console.log(userMap.get('username')); // Output: Prajjal Dhar
+
+
+
+13. Using WeakMap:
+WeakMap ek aur data structure hai jo objects ko keys ke roop mein store karta hai,
+aur weakly held keys ka istemal karta hai.
+
+const user = {};
+const userWeakMap = new WeakMap();
+
+userWeakMap.set(user, {
+  id: '1',
+  username: 'Prajjal Dhar',
+  age: 28,
+  skills: ['Java', 'Python']
+});
+
+console.log(userWeakMap.get(user).username); // Output: Prajjal Dhar
+
+
+
+14. Using Symbol as Keys:
+Aap Symbol ko keys ke roop mein use kar sakte hain taaki key values unique ho.
+
+const id = Symbol('id');
+const user = {
+  [id]: '1',
+  username: 'Prajjal Dhar',
+  age: 28,
+  skills: ['Java', 'Python']
+};
+
+console.log(user[id]); // Output: 1
+
+
+
+
+Object destructuring ek programming concept hai jo JavaScript mein use hota hai. Iska basic
+idea hai ki agar aap ek object se kuchh specific properties ko extract karna chahte hain aur
+unhe alag-alag variables mein store karna chahte hain, to aap object destructuring ka use kar
+sakte hain.
+
+Yah ek shorthand syntax provide karta hai jisse aap ek object se values ko extract kar sakte
+hain aur phir unhe variables mein assign kar sakte hain. Isse aap code ko readable aur concise
+bana sakte hain.
+
+// Object
+const person = {
+  name: 'John Doe',
+  age: 30,
+  country: 'USA'
+};
+
+// Object destructuring
+const { name, age } = person;
+
+console.log(name); // Output: 'John Doe'
+console.log(age);  // Output: 30
+
+Is example mein, person object se name aur age properties ko directly extract karke unhe name
+aur age variables mein store kiya gaya hai. Destructuring ka use arrays mein bhi kiya ja sakta
+hai, jise array destructuring kehte hain.
