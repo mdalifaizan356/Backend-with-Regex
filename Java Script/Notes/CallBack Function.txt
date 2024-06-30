@@ -1,1 +1,120 @@
- 
+ Call Back Function:
+                    "Callback function" programming mein ek mukhya concept hai. Iska matlab
+                    hota hai ek aisi function jo doosre function mein argument ke roop mein pass
+                    kiya jaata hai aur jab wo doosra function execute hota hai, to wo callback
+                    function automatically invoke hoti hai.
+
+                    Yeh technique asynchronous programming mein kaafi upyogi hoti hai, jaise ki
+                    event handling, timers, aur AJAX requests mein. Jab ek asynchronous operation
+                    complete hoti hai, tab associated callback function execute hoti hai. Isse
+                    program flow ko interrupt karne ke bina, non-blocking operations ko handle
+                    kiya ja sakta hai.
+
+                    Callback functions flexibility aur reusability provide karte hain, kyun ki
+                    aap unhe alag-alag contexts mein use kar sakte hain bina core function ko
+                    modify kiye. Isliye, programming mein callbacks ek important concept hain,
+                    jise functional programming languages aur modern JavaScript frameworks jaise
+                    Node.js mein bhi extensively use kiya jaata hai.
+
+eg:
+    function calculator(num1, num2, operation){
+    return operation(num1, num2);
+    }
+
+    const add = (num1, num2)=>{
+    return num1+num2;
+    }
+
+    const sub = (num1, num2)=>{
+    return num1-num2;
+    }
+
+    console.log(calculator(5,5, sub));
+    console.log(calculator(5,5, sub((5,5))));    Aisa nahi karna he qk ye function ki calling he
+
+
+Array Call Back Function:
+    find()
+    findindex()
+    foreach()
+    map()
+    filter()
+    every()
+    some()
+    reduce()
+
+find(): Ye array me se pehla element return karta hai jo di gayi condition ko satisfy karta hai.
+        Jab ye element mil jata hai, dhundhna band ho jata hai.
+
+        const foundElement = array.find(element => condition);
+
+
+findIndex(): Ye array me se pehle element ka index return karta hai jo di gayi condition ko
+             satisfy karta hai. Agar aisa koi element nahi milta hai, to -1 return hota hai.
+
+             const foundIndex = array.findIndex(element => condition);
+
+
+forEach(): Ye ek provided function ko har array element ke liye ek baar execute karta hai.
+           Iska koi return value nahi hota (undefined return hota hai).
+
+           array.forEach(element => {
+            // Har element ke saath kuch kaam karna
+           });
+
+
+map(): Ye ek naya array banata hai jisme har ek original array element par ek provided function
+       ka result hota hai.
+
+        const newArray = array.map(element => {
+            // Har element ko transform karke ek naya element return karna
+            return transformedElement;
+        });
+
+
+filter(): Ye ek naya array banata hai jisme sirf wo elements hote hain jo ek provided function ke
+        diye gaye test ko pass karte hain.
+
+            const filteredArray = array.filter(element => {
+                // Condition ke hisaab se true ya false return karke elements ko filter karna
+                return condition;
+            });
+
+
+every(): Ye check karta hai ki kya sabhi elements array ke ek diye gaye test ko pass karte hain.
+         Agar sabhi elements pass karte hain to true return hota hai, nahi to false.
+
+            const allPass = array.every(element => {
+                // Har element ke liye ek condition check karna
+                return condition;
+            });
+
+some: Ye check karta hai ki kya kam se kam ek element array ke ek diye gaye test ko pass karta
+      hai. Agar kam se kam ek element pass karta hai to true return hota hai, nahi to false.
+
+            const atLeastOnePasses = array.some(element => {
+                // Har element ke liye ek condition check karna
+                return condition;
+            });
+
+reduce: Ye ek accumulator aur har array element ke saath ek provided function ko apply karta hai
+        (left se right direction me) aur isse ek single value me reduce karta hai.
+
+        const reducedValue = array.reduce((accumulator, currentValue) => {
+            // CurrentValue ke basis par accumulator ko update karna
+            return updatedAccumulator;
+        }, initialValue);
+
+
+#Return Value: find, findIndex, every, aur some ek single value return karte hain (find aur
+               findIndex ek element ya index return karte hain, every aur some boolean return
+               karte hain). Jabki forEach, map, filter, aur reduce naye arrays ya dusre
+               aggregated values return karte hain.
+
+#Modifying the Array: forEach array ko modify nahi karta, jabki map, filter, aur reduce
+                      original array ke basis par naye arrays ya values produce karte hain.
+
+#Conditional Behavior: find aur findIndex shart puri hone par dhundhna band karte hain. every
+                       sabhi elements ko shart ke against check karta hai, some kam se kam ek
+                       element ko shart ke against check karta hai.
+
