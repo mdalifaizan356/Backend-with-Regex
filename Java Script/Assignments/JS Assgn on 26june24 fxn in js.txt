@@ -113,7 +113,7 @@ root nikalna hai aur result return karna hai.
 
     const perfectSquare=(sum)=>{
         let sqrt = Math.sqrt(sum);
-        return (sqrt % 1 === 0);
+        return (sqrt % 1 === 0); 
     }
 
 

@@ -66,6 +66,7 @@ const reverse = (n) => {
      let a = 93,
       b = 95,
       c = 99;
+    }
      let avg = (a + b + c) / 3;
      if (avg > 40) {
       let res = prodof2();

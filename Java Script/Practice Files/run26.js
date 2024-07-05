@@ -10,8 +10,6 @@ const division = (a1, a2)=>{
 
 }
 
-
-
 if(sum>80){
   console.log(division(4,2));
 }
