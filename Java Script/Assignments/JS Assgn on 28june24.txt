@@ -1,0 +1,66 @@
+REST OPERATORS with javascript functions
+REGex Software
+•
+28 Jun
+100 points
+Rest operator and multiple arguments:
+
+Passing and Printing Multiple Objects:
+You have several objects and need to pass them to a function. Inside the function, use the rest operator to handle the objects and print each one. Write the function and explain the process.
+
+Summing Any Number of Arguments:
+Write a function that can take any number of arguments and return their sum. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate over them to calculate the sum.
+
+Concatenating Multiple Arrays:
+Create a function that accepts multiple arrays as arguments and returns a single array that concatenates all of them. Explain how the rest operator helps in gathering all the arrays and how you can use the spread operator to concatenate them.
+
+Combining Object Properties:
+Write a function that accepts multiple objects and combines their properties into a single object. Explain the use of the rest operator to gather the objects and how to merge their properties.
+
+Collecting Arguments Except the First:
+Implement a function that takes any number of arguments and returns an array containing all arguments except the first one. Explain how the rest operator can be used in combination with array destructuring to achieve this.
+
+Finding the Maximum Number:
+Create a function that takes any number of numeric arguments and returns the maximum number. Explain how the rest operator collects all arguments into an array and how to use the Math.max function to find the largest number.
+
+Combining Strings:
+Write a function that accepts multiple strings and returns a single string that concatenates them. Explain how the rest operator can handle multiple strings and how to concatenate them using the join method.
+
+Executing Multiple Callback Functions:
+Implement a function that accepts multiple callback functions and executes them in sequence. Explain how the rest operator gathers the callback functions and how to iterate over them to execute each one.
+
+Counting Argument Types:
+Write a function that takes any number of arguments and returns an object with counts of each argument type (e.g., number, string). Explain how the rest operator collects the arguments and how to iterate and count each type.
+
+Filtering Numeric Arguments:
+Create a function that takes any number of arguments and returns an array of only the numeric arguments. Explain how the rest operator gathers the arguments and how to filter them using the typeof operator.
+
+Handling Varying Parameters:
+Write a function that can handle a varying number of parameters and prints them in a formatted string. Explain how the rest operator enables handling of varying arguments and how to format them for output.
+
+Merging Multiple Objects:
+Implement a function that merges multiple objects into one. Explain how the rest operator gathers all objects and how to use Object.assign or the spread operator to merge their properties.
+
+Concatenating and Flattening Arrays:
+Write a function that takes multiple arrays as arguments and returns a single flattened array. Explain how the rest operator collects the arrays and how to use Array.prototype.flat to flatten the result.
+
+Returning Earliest Date:
+Create a function that takes multiple date objects and returns the earliest date. Explain how the rest operator gathers the date objects and how to use Math.min with Date.getTime to find the earliest date.
+
+Logging Arguments Except First:
+Write a function that logs all arguments passed to it except the first one. Explain how the rest operator can be used to collect all but the first argument and how to log them.
+
+Unique Elements from Multiple Arrays:
+Implement a function that takes multiple arrays and returns an array of their unique elements. Explain how the rest operator collects the arrays and how to use a Set to filter unique elements.
+
+Summing Rest Arguments in Arrow Function:
+Write an arrow function that takes multiple arguments and returns their sum. Explain how the rest operator is used in arrow functions to collect arguments and how to sum them.
+
+Combining Multiple Rest Parameters:
+Create a function that takes multiple rest parameters and demonstrates how they can be used together. Explain the rules and limitations of using multiple rest parameters.
+
+Using Rest with Default Parameters:
+Write a function that uses default parameters along with the rest operator. Explain how default parameters are applied before the rest operator collects the remaining arguments.
+
+Object Destructuring with Rest:
+Implement a function that accepts an object and destructures it, using the rest operator to gather the remaining properties. Explain how object destructuring works with the rest operator to separate specific properties from the rest.
