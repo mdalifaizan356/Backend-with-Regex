@@ -20,33 +20,34 @@
 // karna hai aur check karna hai ki wo prime number hai ya nahi. Agar prime hai to uska factorial
 // return karna hai.
 
-let n1=5, n2=5, n3=5;
-let avg = (n1+n2+n3)/3;
+// let n1=5, n2=5, n3=5;
+// let avg = (n1+n2+n3)/3;
 
-const PrimeNumber = (avg)=>{
-  let flag=0;
-  if (avg == 0 || avg == 1){
-    flag = 1;
-  }
+// const PrimeNumber = (avg)=>{
+//   let flag=0;
+//   if (avg == 0 || avg == 1){
+//     flag = 1;
+//   }
 
-  for(let i=2; i<=avg/2; i++){
-    if (avg % i == 0) {
-      flag = 1;
-      break;
-    }
-  }
-  console.log(flag);
-}
+//   for(let i=2; i<=avg/2; i++){
+//     if (avg % i == 0) {
+//       flag = 1;
+//       break;
+//     }
+//   }
+//   console.log(flag);
+// }
 
-if(avg<25){
-  console.log(PrimeNumber(avg));
-}
+// if(avg<25){
+//   console.log(PrimeNumber(avg));
+// }
 
-
-
-
+//############################################5 is panding##########################
 
 
+// User se 6 input lena hai, inka average nikalna hai. Agar average > 70 hai to ek function call
+// karna hai, jisme 4 input lena hai aur unka maximum return karna hai. Agar maximum > 50 hai to
+// uska cube return karna hai.
 
 
 
