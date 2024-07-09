@@ -1,17 +1,59 @@
 Assignment Questions 27th June 2024
 
-1. create an object of user as created in mongodb and you have to pass that object in function
-   and print all its values by destructing and without destructing.
+1 Create an object of user as created in mongodb and you have to pass that object in function
+  and print all its values by destructing and without destructing.
 
-3.you have to use the mongodb user dataset to pass object in function now from that function you
-have to pass the skills key pass as object to another function print all its skills.using
-foreach method
+    const user={
+      "id": "1",
+      "username": "Prajjal Dhar",
+      "role": "admin",
+      "gender": "Male",
+      "age": 28,
+      "skills": ["Java", "Python"]
+    };
 
-function function2(skills) {
-  skills.forEach((skill) => {
-     console.log(skill);
-   });
- }
+    //Print all its values without destructing
+      function printUserValues(user) {
+        console.log("Print all its values by without destructing");
+        console.log(user);
+      }
+
+    //Print all its values by destructing
+      function puvByDestructuring(user) {
+        const {id, username, role, gender, age, skills}=user;
+        console.log("Print all its values by destructing");
+        console.log(id);
+        console.log(username);
+        console.log(role);
+        console.log(gender);
+        console.log(age);
+        console.log(skills);
+      }
+
+    printUserValues(user);
+    puvByDestructuring(user);
+
+
+
+3 You have to use the mongodb user dataset to pass object in function now from that function
+  you have to pass the skills key pass as object to another function print all its skills.
+  using foreach method.
+
+    function userData(Data){
+      // console.log(Data);
+      const {skills}=Data;
+      // console.log(skills);
+      printSkills(skills);
+    } 
+
+    function printSkills(skills){
+      console.log("skills:");
+      skills.forEach(skill => {
+        console.log("  " + skill);
+      });
+    }
+    
+    userData(mongodbUserDataset);
 
 4. you have to use the mongodb user dataset to pass object in function now from that function you have to pass the skills key pass as object to another function print all its skills using this method.
 hint:

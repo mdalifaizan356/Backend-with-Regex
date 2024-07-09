@@ -2,7 +2,34 @@
   it should have an array as key now you have to pass this object in a function which will
   accept it in destructure format now print all the information and call a function which
   will going to pass the key array into another function and call one function that will
-  pass the object as key into another 
+  pass the object as key into another.
+
+    const fruit ={
+        fruitName: "Mango",
+        quantity:"1KG",
+        price:"100",
+        origin: "India",
+        availstatus:"Available",
+        keyArray:["fruitName", "quantity", "price", "origin", "availstatus"]
+    };
+
+    function myfunction(Data){
+        const {fruitName, quantity, price, origin, availstatus, keyArray} = Data;
+        console.log(fruitName);
+        console.log(quantity);
+        console.log(price);
+        console.log(origin);
+        console.log(availstatus);
+        printKeyArray(keyArray);
+    }
+
+    function printKeyArray(Data){
+        console.log("Key Array:", Data);
+    }
+    myfunction(fruit);
+
+
+
 
 2 Create an object named user with at least 5 keys (e.g., userName, userAge, etc.). One of
   the keys should have an array as its value. Then, create a function that accepts this 

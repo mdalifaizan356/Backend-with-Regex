@@ -396,18 +396,93 @@ Question 8
 
 
 Question 9
-User se 6 input lena hai, inka average nikalna hai. Agar average > 70 hai to ek function call
-karna hai, jisme 4 input lena hai aur unka maximum return karna hai. Agar maximum > 50 hai to
-uska cube return karna hai.
-User se 3 input lena hai, inka sum nikalna hai. Agar sum < 30 hai to ek function call karna hai
-aur sum ko 10 se multiply karna hai aur result return karna hai.
+    User se 6 input lena hai, inka average nikalna hai. Agar average > 70 hai to ek function call
+    karna hai, jisme 4 input lena hai aur unka maximum return karna hai. Agar maximum > 50 hai to
+    uska cube return karna hai.
+
+        let n1=80, n2=50, n3=90, n4=80, n5=90, n6=70;
+        let avg = (n1+n2+n3+n4+n5+n6) / 6;
+        console.log(Math.floor(avg));
+
+        const cube = (num)=>{
+            return num*num*num;
+        }
+
+        if(avg > 70){
+            let maxVal=(Math.max(4,2,6,7));
+            console.log(maxVal);
+            if(maxVal>50){
+                console.log(cube(maxVal));
+            }
+        }
+
+    User se 3 input lena hai, inka sum nikalna hai. Agar sum < 30 hai to ek function call karna hai
+    aur sum ko 10 se multiply karna hai aur result return karna hai.
+
+        let n1=5,n2=5, n3=5;
+        let sum = n1+n2+n3;
+        console.log(sum);
+
+        const mul = (num)=>{
+            return num*10;
+        }
+
+        if(sum<30){
+            console.log(mul(sum));
+        }
+
+
 
 Question 10
-User se 5 input lena hai, inka product nikalna hai. Agar product > 500 hai to ek function call
-karna hai, jisme product aur ek user input ko divide karna hai aur result return karna hai.
-Agar result integer hai to factorial nikalna hai aur result return karna hai.
-User se 4 input lena hai, inka maximum nikalna hai. Agar maximum > 20 hai to ek function call
-karna hai aur check karna hai wo prime hai ya nahi. Agar prime hai to uska double return karna
-hai.
+    User se 5 input lena hai, inka product nikalna hai. Agar product > 500 hai to ek function call
+    karna hai, jisme product aur ek user input ko divide karna hai aur result return karna hai.
+    Agar result integer hai to factorial nikalna hai aur result return karna hai.
 
-*/
+        let n1=5,n2=4,n3=10,n4=5,n5=5;
+        let product = n1*n2*n3*n4*n5;
+        console.log(product);
+
+        const division = (num1,num2)=>{
+            return num1/num2;
+        }
+
+        function factorial(num){
+            if (num === 0 || num === 1) {
+                return 1;
+            }
+            else{
+                return num * factorial(num - 1);
+            }
+        }
+
+        if(product>500){
+            divVal = division(product, 5);
+            console.log(divVal);
+
+            if (Number.isInteger(divVal)){
+                console.log(factorial(divVal));
+            }
+        }
+
+    User se 4 input lena hai, inka maximum nikalna hai. Agar maximum > 20 hai to ek function call
+    karna hai aur check karna hai wo prime hai ya nahi. Agar prime hai to uska double return karna
+    hai.
+    
+        let n1=30,n2=5,n3=10,n4=30;
+        let max = Math.max(n1,n2,n3,n4);
+        console.log(max);
+
+        function primeNumber(maxVal){
+            if (maxVal <= 1) return false;
+            for (let i = 2; i * i <= maxVal; i++) {
+                if (maxVal % i == 0) return false;
+            }
+            return true;
+            };
+
+        if(max>20){
+            let primeVal= primeNumber(max);
+            if(primeVal == true){
+                console.log(max*2);
+            }
+        }

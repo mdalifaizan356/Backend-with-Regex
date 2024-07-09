@@ -44,13 +44,25 @@
 
 //############################################5 is panding##########################
 
+// User se 4 input lena hai, inka maximum nikalna hai. Agar maximum > 20 hai to ek function call
+// karna hai aur check karna hai wo prime hai ya nahi. Agar prime hai to uska double return karna
+// hai.
 
-// User se 6 input lena hai, inka average nikalna hai. Agar average > 70 hai to ek function call
-// karna hai, jisme 4 input lena hai aur unka maximum return karna hai. Agar maximum > 50 hai to
-// uska cube return karna hai.
+let n1=30,n2=5,n3=10,n4=30;
+let max = Math.max(n1,n2,n3,n4);
+console.log(max);
 
+function primeNumber(maxVal){
+    if (maxVal <= 1) return false;
+    for (let i = 2; i * i <= maxVal; i++) {
+        if (maxVal % i == 0) return false;
+    }
+    return true;
+    };
 
-
-
-
-
+if(max>20){
+    let primeVal= primeNumber(max);
+    if(primeVal == true){
+        console.log(max*2);
+    }
+}
