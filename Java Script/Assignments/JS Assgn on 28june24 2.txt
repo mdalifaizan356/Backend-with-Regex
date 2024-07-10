@@ -1,6 +1,53 @@
 1   User defined callback function banao calculator jo a,b,c and konsa function run karwana hai
     wo chaleyega, add, subtract,multiply divide.
 
+        function calculator(a, b, c ,callBackfxn){
+            return callBackfxn(a, b, c);
+        }
+        
+        const add = (a, b, c=0)=> {
+            return a + b + c;
+        }
+        const sub = (a, b,c=0)=> {
+            return a - b -c;
+        }
+
+        const product = (a, b, c=1)=> {
+            return a * b *c;
+        }
+
+        const div = (a, b, c=0)=> {
+            return a / b;
+        }
+        let num1=7;
+        let num2=6;
+        let num3;
+        console.log("Addition is: ",calculator(num1, num2, num3, add));
+        console.log("Subtraction is: ",calculator(num1, num2, num3, sub));
+        console.log("Multiplication is: ",calculator(num1, num2, num3, product));
+        console.log("Division is: ",calculator(num1, num2, num3, div));
+
+
 2   User defined function masterfunction banna hai jo 1 information leti hai out of username,
     age,rollno, aur ek function as an argument leti hai, print name mai agar username and
     printname function bheja gaya ho, age, printage, rollno, printrollno.
+
+        function masterFxn(information, callBackFxn){
+            return callBackFxn(information);
+        }
+
+        const printName = (username) => {
+            return `Username is: ${username}`;
+        }
+
+        const printAge = (age) => {
+            return `Age is: ${age}`;
+        }
+
+        const printRollNo = (rollno) => {
+            return `Roll number is: ${rollno}`;
+        }
+
+        console.log(masterFxn("Faizan", printName));
+        console.log(masterFxn(25, printAge));
+        console.log(masterFxn(101, printRollNo));

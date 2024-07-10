@@ -4,30 +4,35 @@
   will going to pass the key array into another function and call one function that will
   pass the object as key into another.
 
-    const fruit ={
-        fruitName: "Mango",
-        quantity:"1KG",
-        price:"100",
-        origin: "India",
-        availstatus:"Available",
-        keyArray:["fruitName", "quantity", "price", "origin", "availstatus"]
+    const fruit= {
+      fruitName:"Mango",
+      origin: "India",
+      quantity : "1kg",
+      price: "100",
+      keyArray:["fruitName", "quantity", "price", "origin"]
     };
-
-    function myfunction(Data){
-        const {fruitName, quantity, price, origin, availstatus, keyArray} = Data;
-        console.log(fruitName);
-        console.log(quantity);
-        console.log(price);
-        console.log(origin);
-        console.log(availstatus);
-        printKeyArray(keyArray);
+        
+    function printDetails(fruit){
+      const {fruitName, origin, quantity, price, keyArray} = fruit;
+      console.log(fruitName);
+      console.log(origin);
+      console.log(quantity);
+      console.log(price);
+      printKeyArray(keyArray);
+      printAllKeys(fruit);
     }
-
-    function printKeyArray(Data){
-        console.log("Key Array:", Data);
+        
+    const printKeyArray=(keyArray)=>{
+      console.log(keyArray);
     }
-    myfunction(fruit);
-
+        
+    const printAllKeys = (fruit)=>{
+      Object.keys(fruit).forEach(key => {
+      console.log(key);
+      });
+    }
+        
+    printDetails(fruit);
 
 
 
@@ -37,12 +42,76 @@
   will pass the key array into another function. Additionally, call a function that will pass
   the object as a key into another function and print all the keys.
 
+    const user= {
+        userId:"1",
+        userName:"Faizan",
+        age: "26",
+        gender : "Male",
+        hobbies:["Singing", "Driving"]
+      };
+          
+      function printDetails(user){
+        const {userId, userName, age, gender, hobbies} = user;
+        console.log(userId);
+        console.log(userName);
+        console.log(age);
+        console.log(gender);
+        printHobbies(hobbies);
+        printAllKeys(user);
+      }
+          
+      const printHobbies=(hobbies)=>{
+        console.log(hobbies);
+      }
+          
+      const printAllKeys = (user)=>{
+        Object.keys(user).forEach(key => {
+        console.log(key);
+        });
+      }
+          
+      printDetails(user);
+
+
+
 Product Data
 3 Create an object named product with at least 5 keys (e.g., productName, productPrice, etc.)
   One of the keys should have an array as its value. Then, create a function that accepts this
   object in destructured format, prints all the information, and calls another function that
   will pass the key array into another function. Additionally, call a function that will
   pass the object as a key into another function and print all the keys.
+
+    const product= {
+        productId:"101",
+        productName:"Laptop",
+        category: "Electronic",
+        price : 15000,
+        tags:["High-Performance", "Gaming"]
+      };
+          
+      function printDetails(product){
+        const {productId, productName, category, price, tags} = product;
+        console.log(productId);
+        console.log(productName);
+        console.log(category);
+        console.log(price);
+        printTags(tags);
+        printAllKeys(product);
+      }
+          
+      const printTags=(tags)=>{
+        console.log(tags);
+      }
+          
+      const printAllKeys = (product)=>{
+        Object.keys(product).forEach(key => {
+        console.log(key);
+        });
+      }
+          
+      printDetails(product);
+
+
 
 Order Data
 4 Create an object named order with at least 5 keys (e.g., orderId, orderDate, etc.). One
@@ -51,12 +120,78 @@ Order Data
   will pass the key array into another function. Additionally, call a function that will pass
   the object as a key into another function and print all the keys.
 
+    const order= {
+        orderId:"501",
+        orderDate:"03/july/2024",
+        location:"Jaipur",
+        orderPrice: 25000,
+        orderItem:["Desktop", "Laptop"]
+    };
+          
+    function printDetails(order){
+        const {orderId, orderDate, location, orderPrice, orderItem} = order;
+        console.log(orderId);
+        console.log(orderDate);
+        console.log(location);
+        console.log(orderPrice);
+        printItems(orderItem);
+        printAllKeys(order);
+    }
+          
+    const printItems=(orderItem)=>{
+        console.log(orderItem);
+    }
+          
+    const printAllKeys = (order)=>{
+        Object.keys(order).forEach(key => {
+        console.log(key);
+        });
+    }
+          
+    printDetails(order);
+
+
+
 Employee Data
 5 Create an object named employee with at least 5 keys (e.g., employeeName, employeeId, etc.)
   One of the keys should have an array as its value. Then, create a function that accepts this
   object in destructured format, prints all the information, and calls another function that
   will pass the key array into another function. Additionally, call a function that will pass
   the object as a key into another function and print all the keys.
+
+    const employee= {
+        employeeId:"501",
+        employeeName:"Faizan",
+        age:"26",
+        location:"Jaipur",
+        gender:"Male",
+        skills:["Java Script", "Node.Js"]
+    };
+          
+    function printDetails(employee){
+        const {employeeId, employeeName, age, location, gender, skills} = employee;
+        console.log(employeeId);
+        console.log(employeeName);
+        console.log(age);
+        console.log(location);
+        console.log(gender);
+        printSkills(skills);
+        printAllKeys(employee);
+    }
+          
+    const printSkills=(skills)=>{
+        console.log(skills);
+    }
+          
+    const printAllKeys = (employee)=>{
+        Object.keys(employee).forEach(key => {
+        console.log(key);
+        });
+    }
+          
+    printDetails(employee);
+
+
 
 Customer Data
 6 Create an object named customer with at least 5 keys (e.g., customerName, customerAddress,
@@ -65,6 +200,38 @@ Customer Data
   function that will pass the key array into another function. Additionally, call a function
   that will pass the object as a key into another function and print all the keys.
 
+    const customer= {
+        customerId:"501",
+        customerName:"Faizan",
+        age:"26",
+        gender:"Male",
+        address:["Jaipur", "Chittorgarh"],
+    };
+          
+    function printDetails(customer){
+        const {customerId, customerName, age, gender, address} = customer;
+        console.log(customerId);
+        console.log(customerName);
+        console.log(age);
+        console.log(gender);
+        printAddress(address);
+        printAllKeys(customer);
+    }
+          
+    const printAddress=(address)=>{
+        console.log(address);
+    }
+          
+    const printAllKeys = (customer)=>{
+        Object.keys(customer).forEach(key => {
+        console.log(key);
+        });
+    }
+          
+    printDetails(customer);
+
+
+
 Inventory Data
 7 Create an object named inventory with at least 5 keys (e.g., itemId, itemQuantity, etc.)
   One of the keys should have an array as its value. Then, create a function that accepts
@@ -72,9 +239,71 @@ Inventory Data
   that will pass the key array into another function. Additionally, call a function that will
   pass the object as a key into another function and print all the keys.
 
+    const inventory = {
+        itemId: 101,
+        itemName: "Laptop",
+        quantity: 1,
+        price: 750,
+        categories: ["Electronics", "Computers", "Office"]
+    };
+          
+    function printDetails(inventory){
+        const {itemId, itemName, quantity, price, categories} = inventory;
+        console.log(itemId);
+        console.log(itemName);
+        console.log(quantity);
+        console.log(price);
+        printCategories(categories);
+        printAllKeys(inventory);
+    }
+          
+    const printCategories=(categories)=>{
+        console.log(categories);
+    }
+          
+    const printAllKeys = (inventory)=>{
+        Object.keys(inventory).forEach(key => {
+        console.log(key);
+        });
+    }
+          
+    printDetails(inventory);
+
+
+
 Vehicle Data
 8 Create an object named vehicle with at least 5 keys (e.g., vehicleModel, vehiclePrice, etc.)
   One of the keys should have an array as its value. Then, create a function that accepts this
   object in destructured format, prints all the information, and calls another function that
   will pass the key array into another function. Additionally, call a function that will pass
   the object as a key into another function and print all the keys.
+
+    const vehicle = {
+        vehicleId: 101,
+        vehicleName: "Laptop",
+        modal: 1,
+        price: 750,
+        availability:["Jaipur", "Kolkata"]
+    };
+          
+    function printDetails(vehicle){
+        const {vehicleId, vehicleName, model, price, availability} = vehicle;
+        console.log(vehicleId);
+        console.log(vehicleName);
+        console.log(model);
+        console.log(price);
+        printAvailability(availability);
+        printAllKeys(vehicle);
+    }
+          
+    const printAvailability=(availability)=>{
+        console.log(availability);
+    }
+          
+    const printAllKeys = (vehicle)=>{
+        Object.keys(vehicle).forEach(key => {
+        console.log(key);
+        });
+    }
+          
+    printDetails(vehicle);

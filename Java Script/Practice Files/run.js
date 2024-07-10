@@ -1,9 +1,32 @@
-// create an object name fruits which should atleast 5 keys such that fruit name, fruit price.
-//   it should have an array as key now you have to pass this object in a function which will
-//   accept it in destructure format now print all the information and call a function which
-//   will going to pass the key array into another function and call one function that will
-//   pass the object as key into another 
+// Executing Multiple Callback Functions:
+// Implement a function that accepts multiple callback functions and executes them in sequence.
+// Explain how the rest operator gathers the callback functions and how to iterate over them to
+// execute each one.
 
+function calculator(a, b, c , ...callBackfxn){
+    array.forEach(callBackfxn => {
+        console.log(callBackfxn);
+        });
+}
 
+const add = (a, b, c=0)=> {
+    return a + b + c;
+}
+const sub = (a, b,c=0)=> {
+    return a - b -c;
+}
 
+const product = (a, b, c=1)=> {
+    return a * b *c;
+}
 
+const div = (a, b, c=0)=> {
+    return a / b;
+}
+let num1=7;
+let num2=6;
+let num3;
+console.log("Addition is: ",calculator(num1, num2, num3, add, sub, product, div));
+// console.log("Subtraction is: ",calculator(num1, num2, num3, sub));
+// console.log("Multiplication is: ",calculator(num1, num2, num3, product));
+// console.log("Division is: ",calculator(num1, num2, num3, div));
