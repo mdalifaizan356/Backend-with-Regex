@@ -1,0 +1,51 @@
+How many documents are there in the collection?
+Retrieve all documents where the role is "admin".
+Find all documents where the role is "customer" and the username contains "Karamchandani".
+Retrieve the document with the username "Sumanth Rao".
+Find all documents where the user's first name starts with "R".
+Retrieve all documents where the user has the skill "Python".
+Find all documents where the user has the skill "Java" and "Python".
+Retrieve all documents where the user's first name is "Aryan" or the last name is "Gupta".
+Find all documents where the user has the skill "Java" but not "Python".
+Retrieve all documents where the user's last name is "Sharma" and the role is "customer".
+Find all documents where the user has exactly three skills.
+Retrieve all documents where the user's first name starts with "S" and the role is "admin".
+Find all documents where the user has the skill "Java" and the role is not "admin".
+Retrieve all documents where the user's role is not specified.
+Find all documents where the user has at least four skills.
+Retrieve all documents where the user's role is "customer" and the user has no specified skills.
+Find all documents where the user's email contains "regexsoftware.com".
+Retrieve all documents where the user's email does not contain "gmail.com".
+Find all documents where the user's last name is not "Singh".
+Retrieve all documents where the user's role is "admin" and the user has the skill "Java".
+Find all documents where the user's first name is "Ananya" and the user's role is "customer".
+Retrieve all documents where the user's role is "admin" and the user has at least one skill.
+Find all documents where the user's role is "admin" and the user's first name starts with "R".
+Retrieve all documents where the user's role is "customer" and the user's last name is "Patel".
+Find all documents where the user's role is "admin" and the user has the skill "Python".
+Retrieve all documents where the user's role is "customer" and the user's last name is not "Gupta".
+Find all documents where the user's role is "admin" and the user's email ends with "@regexsoftware.com".
+Retrieve all documents where the user's role is "customer" and the user has the skill "React".
+Find all documents where the user's role is "customer" and the user has the skill "SQL".
+Retrieve all documents where the user's role is "admin" and the user has at least three skills.
+Find all documents where the user's role is "customer" and the user has the skills "Java" and "C++".
+Retrieve all documents where the user's role is "admin" and the user's email does not contain "gmail.com".
+Find all documents where the user's role is "customer" and the user's last name starts with "M".
+Retrieve all documents where the user's role is "admin" and the user's first name is not "Rahul".
+Find all documents where the user's role is "customer" and the user's email does not contain "gmail.com".
+Retrieve all documents where the user's role is "admin" and the user has the skill "Java" but not "JavaScript".
+Find all documents where the user's role is "customer" and the user's first name is not "Ananya".
+Retrieve all documents where the user's role is "admin" and the user's email contains "regexsoftware.com".
+Find all documents where the user's role is "customer" and the user has the skill "HTML" but not "CSS".
+Retrieve all documents where the user's role is "admin" and the user has the skill "Java" and "JavaScript".
+Find the average age of users.
+Find all female users from Jaipur who know Python.
+Find all male users in Delhi who are above age 26
+Find all users who are from either New Delhi or Mumbai.
+Find all users who have the same last name.
+Find the count of users in each city.
+How many users are from New Delhi?
+How many Female users are from Jaipur?
+How many Male users are there in Delhi who have skills Java?
+How many users are from Hyderabad having age greater than 24 and have skill Python,C++
+How many female users are from Goa having age greater than 24 and have skill Python,C++

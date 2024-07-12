@@ -126,15 +126,60 @@ Implement a function that accepts multiple callback functions and executes them 
 Explain how the rest operator gathers the callback functions and how to iterate over them to
 execute each one.
 
+    function masterFxn(...callbackFxn){
+        callbackFxn.forEach(callbackFxn => {
+            console.log(callbackFxn());
+            
+        });
+
+    }
+
+    const add= ()=>{
+        console.log("Add Function");
+    }
+
+    const sub= ()=>{
+        console.log("sub Function");
+    }
+
+    const multiply= ()=>{
+        console.log("multiply Function");
+    }
+    const div= ()=>{
+        console.log("div Function");
+    }
+
+    masterFxn(add, sub, multiply, div);
+
+
+
 Counting Argument Types:
 Write a function that takes any number of arguments and returns an object with counts of
 each argument type (e.g., number, string). Explain how the rest operator collects the
 arguments and how to iterate and count each type.
 
+    function countDataType(...Data) {
+        const typeCounts = {};
+        Data.forEach(Data => {
+        const type = typeof Data;
+        if (type in typeCounts) {
+            typeCounts[type]++;
+        } else {
+            typeCounts[type] = 1;
+        }
+        });
+        return typeCounts;
+    }
+    console.log(countDataType(1, 'hello', true, 42, 'world', false, {}));
+
+
+
 Filtering Numeric Arguments:
 Create a function that takes any number of arguments and returns an array of only the
 numeric arguments. Explain how the rest operator gathers the arguments and how to filter
 them using the typeof operator.
+
+
 
 Handling Varying Parameters:
 Write a function that can handle a varying number of parameters and prints them in a

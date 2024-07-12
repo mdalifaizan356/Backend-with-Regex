@@ -1,0 +1,6 @@
+1. user,post,image koi ek se data fetch karna hai 
+2. data fetch hone ke badd sirf ek field of information ka new array create karna hai.
+3. data fetch hone ke badd har odd field of information ka new array create karna hai.
+4. data fetch hone ke badd har even field of information ka new array create karna hai.
+5. data fetch hone ke badd har mutiple of 3 ka field of information ka array create karna ke lana hai.
+6.data mai se se sirf 2-3 field of information ko leke ek array mai add karna hai.
