@@ -179,6 +179,11 @@ Create a function that takes any number of arguments and returns an array of onl
 numeric arguments. Explain how the rest operator gathers the arguments and how to filter
 them using the typeof operator.
 
+    function filterNumber(...args) {
+        return args.filter(arg => typeof arg === 'number');
+    }
+    console.log(filterNumber(1, 'hello', true, 42, 'world', false, {}));
+
 
 
 Handling Varying Parameters:
@@ -186,10 +191,22 @@ Write a function that can handle a varying number of parameters and prints them 
 formatted string. Explain how the rest operator enables handling of varying arguments and
 how to format them for output.
 
+    function Sting(...Data){
+        return Data.join(' ');
+    }
+    console.log(Sting("Heelo", 7, "Kaise", "Ho", true));
+
 Merging Multiple Objects:
 Implement a function that merges multiple objects into one. Explain how the rest operator
 gathers all objects and how to use Object.assign or the spread operator to merge their
 properties.
+
+    function countDataType(...Data){
+        return {...Data};
+    }
+    console.log(countDataType({key1:"value1"}, {key1:"value1"}, {key1:"value1"}));
+
+
 
 Concatenating and Flattening Arrays:
 Write a function that takes multiple arrays as arguments and returns a single flattened

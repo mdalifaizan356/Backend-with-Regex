@@ -1,19 +1,12 @@
-// Filtering Numeric Arguments:
-// Create a function that takes any number of arguments and returns an array of only the
-// numeric arguments. Explain how the rest operator gathers the arguments and how to filter
-// them using the typeof operator.
+// Concatenating and Flattening Arrays:
+// Write a function that takes multiple arrays as arguments and returns a single flattened
+// array. Explain how the rest operator collects the arrays and how to use Array.prototype.flat
+// to flatten the result.
 
-function countDataType(...Data) {
-    const typeCounts = {};
-    Data.forEach(Data => {
-    const type = typeof Data;
-    if (type in typeCounts) {
-        if(typeCounts==number)
-        typeCounts[type]++;
-    } else {
-        typeCounts[type] = 1;
-    }
-    });
-    return typeCounts;
+function singleArray(...Data){
+    newArray=[].concat(...Data);
+    return newArray;
+    // return newArray.join();
 }
-console.log(countDataType(1, 'hello', true, 42, 'world', false, {}));
+
+console.log(singleArray([1,2,3], [4,5,6], [7,8,9]));
