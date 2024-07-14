@@ -213,6 +213,16 @@ Write a function that takes multiple arrays as arguments and returns a single fl
 array. Explain how the rest operator collects the arrays and how to use Array.prototype.flat
 to flatten the result.
 
+    function singleArray(...Data){
+        newArray=[].concat(...Data);
+        // return newArray;
+        // return newArray.join();
+        return newArray.flat();
+    }
+
+    console.log(singleArray([1,2,3], [4,5, [6]], [7,8,9]));
+
+
 Returning Earliest Date:
 Create a function that takes multiple date objects and returns the earliest date.
 Explain how the rest operator gathers the date objects and how to use Math.min with
@@ -222,6 +232,12 @@ Logging Arguments Except First:
 Write a function that logs all arguments passed to it except the first one. Explain how the
 rest operator can be used to collect all but the first argument and how to log them.
 
+    function exceptFirst(firstNumber, ...numbers) {
+        return firstNumber;
+    }
+    console.log(exceptFirst(1,2,3,4,5));
+
+
 Unique Elements from Multiple Arrays:
 Implement a function that takes multiple arrays and returns an array of their unique
 elements. Explain how the rest operator collects the arrays and how to use a Set to filter
@@ -230,6 +246,16 @@ unique elements.
 Summing Rest Arguments in Arrow Function:
 Write an arrow function that takes multiple arguments and returns their sum. Explain how the
 rest operator is used in arrow functions to collect arguments and how to sum them.
+
+    const sum = (...numbers)=>{
+        let add = 0;
+        for (let number of numbers) {
+            add= add + number;
+        }
+        return add;
+    }
+    console.log(sum(2,2));
+
 
 Combining Multiple Rest Parameters:
 Create a function that takes multiple rest parameters and demonstrates how they can be used
