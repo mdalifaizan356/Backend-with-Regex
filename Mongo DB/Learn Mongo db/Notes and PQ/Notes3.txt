@@ -113,3 +113,18 @@ yeh sab kuch from frontend to backend jis language mai ho rahi hogi that is java
  AWS,Google cloud platfrom: virtual machine jisme operating systems par par apna frontend, backend or database ko deploy karoge
  
  //cloud computing: on demand delivery of computer power, database storage, applications and other it resources that are required to run a web application.
+
+
+
+ count and sum are same but count use to out of aggreigation and sum is use to inner of aggrigation.
+
+ replica set: it is generate after unwinding of array.
+
+[   
+    {
+        $unwind = "$skills";
+    },
+        $group{
+            $
+        }
+]

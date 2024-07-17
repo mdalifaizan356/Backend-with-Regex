@@ -16,7 +16,9 @@ How would you find the first user who has the skill 'React'?
 How would you find the first user who is an admin and lives in 'Jaipur'?
 How would you find the first user with a salary of exactly 900,000?How would you find the first
 user whose username is 'Rahul Verma'?
-Splice and Slice QuestionsHow would you remove the first user who lives in 'Kolkata' from the array?
+
+Splice and Slice QuestionsHow
+would you remove the first user who lives in 'Kolkata' from the array?
 How would you get a new array containing the first 5 users?
 How would you get a new array containing the last 5 users?
 How would you create a new array with users from the 3rd to the 7th position (inclusive)?

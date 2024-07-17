@@ -49,3 +49,33 @@ How many Female users are from Jaipur?
 How many Male users are there in Delhi who have skills Java?
 How many users are from Hyderabad having age greater than 24 and have skill Python,C++
 How many female users are from Goa having age greater than 24 and have skill Python,C++
+
+
+const Data = require("../JSON Files/userdata.json");
+console.log(Data);
+
+1   console.log(Data.length);
+
+2   const query = Data.filter(data=>data.role==="admin");
+    console.log(query);
+
+3   const query = Data.filter(data=>data.role==="customer"&&role.username==="Karamchandani");
+    console.log(query);
+
+4   const query = Data.filter(data=>data.username==="Sumanth Rao");
+    console.log(query);
+
+5   const query = Data.filter(data=>data.firstName.startsWith("R"));
+    console.log(query);
+
+6   const query = Data.filter(data=>data.skills="Python");
+    console.log(query);
+
+7   const query = Data.filter(data=>data.skills=["Java", "Python"]);
+    console.log(query);
+
+8   const query = Data.filter(data=>data.firstName==="Aryan"||data.lastName==="Gupta");
+    console.log(query);
+
+9
+

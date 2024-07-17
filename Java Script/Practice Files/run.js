@@ -67,8 +67,17 @@ operator to separate specific properties from the rest.
 
 // 8july
 
-/*
-How many documents are there in the collection?
+//Panding
+//9 Find all documents where the user has the skill "Java" but not "Python".
+// const query= Data.filter(data=>data.skills=="Java" && data.skills!=="Python");
+// console.log(query);
+// const query= Data.find(data=>data.skills=="Java" || data.skills!="Python");
+// console.log(query);
 
+const Data = require("../JSON Files/userdata.json");
+// console.log(Data);
 
-*/
+//Retrieve all documents where the user's last name is "Sharma" and the role is "customer".
+const query= Data.filter(data=>data.skills=="Java" && data.skills!=="Python");
+console.log(query);
+
