@@ -74,10 +74,24 @@ operator to separate specific properties from the rest.
 // const query= Data.find(data=>data.skills=="Java" || data.skills!="Python");
 // console.log(query);
 
-const Data = require("../JSON Files/userdata.json");
-// console.log(Data);
+// const Data = require("../JSON Files/userdata.json");
+// // console.log(Data);
 
-//Retrieve all documents where the user's last name is "Sharma" and the role is "customer".
-const query= Data.filter(data=>data.skills=="Java" && data.skills!=="Python");
-console.log(query);
+// //Retrieve all documents where the user's last name is "Sharma" and the role is "customer".
+// const query= Data.filter(data=>data.skills=="Java" && data.skills!=="Python");
+// console.log(query);
+//######################################################################################################################
+
+//1 june
+
+
+// const Data = require("../JSON Files/userdata.json");
+    // console.log(Data);
+
+
+const myArray= [1,2,3,4,5,6,7,8,9];
+
+const newArray = myArray.filter(evenNumber=>evenNumber.myArray%2===0);
+console.log(newArray);
+
 
