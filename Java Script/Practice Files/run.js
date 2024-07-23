@@ -86,12 +86,10 @@ operator to separate specific properties from the rest.
 
 
 // const Data = require("../JSON Files/userdata.json");
-    // console.log(Data);
+// console.log(Data);
 
 
 const myArray= [1,2,3,4,5,6,7,8,9];
 
 const newArray = myArray.filter(evenNumber=>evenNumber.myArray%2===0);
 console.log(newArray);
-
-
