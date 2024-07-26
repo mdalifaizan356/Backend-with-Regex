@@ -1,0 +1,4 @@
+inside the terminal 
+
+browser client side
+nodejs server side
