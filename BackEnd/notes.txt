@@ -1,4 +1,44 @@
 inside the terminal 
+npm int -y or npm init 
+npm i mongoose express colors dotenv nodemon morgan
 
 browser client side
 nodejs server side
+what is console?
+console is the place where we can see the output of our code
+
+what is the difference between browser console and system terminal
+browser console is the place where we can see the output of our code inside any browser
+system terminal is the place where we can see the output of our code inside any system
+
+what is the difference between server and system
+server is the resources that is available in any region at any weather condition and at any point of time.
+system is the resources that is not following any such criteria
+
+server ==system == os
+
+os
+1. Operating system
+2. Webserver
+3. Web browser
+4. Web application
+5. HTTP modules 
+6. File system
+7. Routing
+
+server.js======> upar diye gaye 7 kaam agar isi ek file me ho jaye to monolithic architecture ban jayega or agar
+divide kar denge to distributive architecture ban jayega
+
+Model View Controller MVC
+Model == database
+View == front end
+controller == backend
+
+System design of MVC
+1. monolithic architecture
+2. distributive architecture
+3. microservices architecture
+4. Scalability
+5. load balancing
+6. Caching
+7. Routing

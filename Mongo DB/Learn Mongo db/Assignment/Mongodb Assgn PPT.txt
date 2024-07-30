@@ -1,0 +1,15 @@
+Q1. Find All Documents:
+    db.mobile.find()
+
+Q2. Count All Documents
+    db.mobile.find().count()
+
+Q3 Find all Devices of Samsung
+
+Q4 Find Devices with Multiple RAM Options (e.g., 8GB and 12GB):
+
+Q5 Count the Number of Devices by Brand:
+{
+  "count": 3,
+  "_id": "Sony"
+}
