@@ -42,3 +42,32 @@ System design of MVC
 5. load balancing
 6. Caching
 7. Routing
+
+
+HTTP methods
+get: Any information that is server by the server to the frontend.
+post: any information taken from frontend by the server
+put: Any information update by the server to the frontend
+delete: Any information delete by the server to the frontend
+patch: Specific information update by the server to the frontend
+
+Kisi bhi information ko crerate karna==> post
+information ko update karna==> put patch
+delete karna==> delete
+read karna==> get
+
+Path module
+offilen \  c:\
+online /   localhost:8000   slash formate   / root folder hota he
+online / www.google.com domain formate
+
+npm vs npx
+
+JavaScript
+    Vannila js
+    Node js
+    React js
+    Express js
+    Vue js
+    Next js
+    Electron js
