@@ -64,10 +64,53 @@ online / www.google.com domain formate
 npm vs npx
 
 JavaScript
-    Vannila js
-    Node js
-    React js
-    Express js
-    Vue js
-    Next js
-    Electron js
+    Vannila js:
+        It is pure JavaScript without frameworks and libraries. Used for web development, handling DOM
+        manipulation, events and interactions without additional dependencies.
+
+    Node js:
+        It is Server side JavaScript runtime environment. Facilitates backend development, handles server
+        operations. enables asynchronous, event-driven programming and Scalable network applications.
+
+    React js:
+        It is JavaScript library for building user interfaces. Developed by facebook. Focuses on component based
+        architecture. Virtual DOM for efficient rendering and state management in web applications.
+
+    Express js:
+        Web application framework for Nodejs. Simplifies server side development. provides routing, middleware
+        support and various HTTP utility methods for building APIs and web apps.
+
+    Vue js:
+        Progressive JavaScript framework for building user interfaces. emphasizes declarative rendering, component
+        based architecture and two way data binding for interactive web applications.
+
+    Next js:
+        React framework for server-rendered React applications. Facilitates server side rendering, automatic code
+        splitting and Simplified routing for React based web projects.
+
+    Electron js:
+        Cross-Platform desktop application framework, utilizes web technologies(HTML, CSS, JS) to build desktop
+        applications compatible with windows. mac and linux.
+
+
+Node.js 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+index.js k tukde karne pr react.js banta he
+server.js k tukde karne pr MVC architecture banta he
