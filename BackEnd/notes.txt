@@ -91,26 +91,12 @@ JavaScript
     Electron js:
         Cross-Platform desktop application framework, utilizes web technologies(HTML, CSS, JS) to build desktop
         applications compatible with windows. mac and linux.
+    Touri js:
 
 
-Node.js 
+Node.js ?
+server side development?
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-index.js k tukde karne pr react.js banta he
-server.js k tukde karne pr MVC architecture banta he
+index.js k tukde karne pr react.js kehlata he
+server.js k tukde karne pr MVC architecture kehlata he.

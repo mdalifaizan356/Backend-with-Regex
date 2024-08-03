@@ -26,29 +26,73 @@
 
 
 
-//2nd Class  Monolithic Architecture
-const express = require("express");       //require ECMA 5 ka syntax he
+// //2nd  serving json data use utility folder
+// const express = require("express");       //require ECMA 5 ka syntax he
+// const colors = require("colors");
+// const dotenv = require("dotenv").config();
+// const userdata = require("./utility/userdata.json");
+
+// const app =express();                           //Properties of express transfer into app
+// // const PORT = process.env.PORT||5000
+// const PORT = 5000;                            //PORT is a which platform where server is launch
+
+// app.use(express.json());     //It is inbuilt middleware. jab bhi use dikhayi de to wo middleware he. use ek parameter leta he
+
+// // let data = {
+// //     "name":"John Doe",
+// //     "age":30,
+// // }
+
+// // app.get(route, function)
+// app.get("/", (req, res)=>{   //get 2 parameter leta he. 1 route konsa he. 2. us rout pr karna kya he.
+//     // res.send("WelCome To HomePage");
+//     // res.send("<h1>Hello World<h1/>");
+//     // res.send(data);
+//     res.send(userdata);
+// });
+
+
+// app.listen(PORT, ()=>
+//     console.log(`Server running on port number ${PORT}`.blue.bold)
+// );
+
+
+
+
+
+
+//3nd Class serving static HTML file    use public folder
+const express = require("express");
 const colors = require("colors");
 const dotenv = require("dotenv").config();
 const userdata = require("./utility/userdata.json");
+const fileurlToPat = require("url");
+const path = require("path");
 
-const app =express();                           //Properties of express transfer into app
+const app =express();
 // const PORT = process.env.PORT||5000
-const PORT = 5000;                            //PORT is a which platform where server is launch
+const PORT = 5000;
 
-app.use(express.json());     //It is inbuilt middleware. jab bhi use dikhayi de to wo middleware he. use ek parameter leta he
+app.use(express.json());
 
-// let data = {
-//     "name":"John Doe",
-//     "age":30,
-// }
+// static file wala middleware
+app.use(express.static(path.resolve(__dirname,"./public")));
 
-// app.get(route, function)
-app.get("/", (req, res)=>{   //get 2 parameter leta he. 1 route konsa he. 2. us rout pr karna kya he.
-    // res.send("WelCome To HomePage");
-    // res.send("<h1>Hello World<h1/>");
-    // res.send(data);
+
+app.get("/userdata", (req, res)=>{
     res.send(userdata);
+}); 
+
+app.get("/", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./public","index.html"));
+});
+
+app.get("/home", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./public","index.html"));
+});
+
+app.get("/contact", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./public","contact.html"));
 });
 
 

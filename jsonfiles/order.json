@@ -1,0 +1,63 @@
+[
+    {
+        "user":"Alice",
+        "age": 25,
+        "city":"New York",
+        "likes":["reading", "hiking", "photography"], 
+        "orders":[
+            {"product": "book", "quantity":3},
+            {"product": "camera", "quantity":1}
+        ]
+    },
+
+    {
+        "user":"Bob",
+        "age": 30,
+        "city":"Los Angeles",
+        "likes":["surfing", "music", "cooking"], 
+        "orders":[
+            {"product": "surfboard", "quantity":1},
+            {"product": "guitar", "quantity":2}
+        ]
+    },
+    {
+        "user":"Charlie",
+        "age": 28,
+        "city":"San Francisco",
+        "likes":["running", "painting", "gardening"], 
+        "orders":[
+            {"product": "paints", "quantity":2},
+            {"product": "running shoes", "quantity":1}
+        ]
+    },
+    {
+        "user":"David",
+        "age": 35,
+        "city":"Chicago",
+        "likes":["cooking", "movies", "volunteering"], 
+        "orders":[
+            {"product": "cookware set", "quantity":1},
+            {"product": "DVDs", "quantity":5}
+        ]
+    },
+    {
+        "user":"Eve",
+        "age": 27,
+        "city":"Miami",
+        "likes":["beach", "swimming", "traveling"], 
+        "orders":[
+            {"product": "swimsuit", "quantity":2},
+            {"product": "travel bag", "quantity":1}
+        ]
+    },
+    {
+        "user":"Eve",
+        "age": 27,
+        "city":"Miami",
+        "likes":["beach", "swimming", "traveling"], 
+        "orders":[
+            {"product": "swimsuit", "quantity":2},
+            {"product": "travel bag", "quantity":1}
+        ]
+    }
+]
