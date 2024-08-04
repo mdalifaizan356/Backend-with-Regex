@@ -61,38 +61,75 @@
 
 
 
-//3nd Class serving static HTML file    use public folder
+// //3nd Class serving static HTML file    use public folder
+// const express = require("express");
+// const colors = require("colors");
+// const dotenv = require("dotenv").config();
+// const morgan = require("morgan");
+// const userdata = require("./utility/userdata.json");
+// const fileurlToPath = require("url");
+// const path = require("path");
+
+// const app =express();
+// // const PORT = process.env.PORT||5000
+// const PORT = 5000;
+
+// app.use(express.json());
+
+// // static file wala middleware
+// app.use(express.static(path.resolve(__dirname,"./public")));
+
+
+// app.get("/userdata", (req, res)=>{
+//     res.send(userdata);
+// }); 
+
+// app.get("/", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname,"./public","index.html"));
+// });
+
+// app.get("/home", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname,"./public","index.html"));
+// });
+
+// app.get("/contact", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname,"./public","contact.html"));
+// });
+
+// app.get("/stopwatch", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname,"./public","stopwatch.html"));
+// });
+
+
+// app.listen(PORT, ()=>
+//     console.log(`Server running on port number ${PORT}`.blue.bold)
+// );
+
+
+
+
+
+
+
+//4th Class Connect DB                
 const express = require("express");
 const colors = require("colors");
+const morgan = require("morgan");
 const dotenv = require("dotenv").config();
-const userdata = require("./utility/userdata.json");
-const fileurlToPat = require("url");
 const path = require("path");
+const connectDB = require("./config/db")
 
 const app =express();
-// const PORT = process.env.PORT||5000
-const PORT = 5000;
+const PORT = process.env.PORT||5000
+// const PORT = 5000;
+
+connectDB();
+
 
 app.use(express.json());
 
-// static file wala middleware
-app.use(express.static(path.resolve(__dirname,"./public")));
-
-
-app.get("/userdata", (req, res)=>{
-    res.send(userdata);
-}); 
-
 app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./public","index.html"));
-});
-
-app.get("/home", (req, res)=>{
-    res.sendFile(path.resolve(__dirname,"./public","index.html"));
-});
-
-app.get("/contact", (req, res)=>{
-    res.sendFile(path.resolve(__dirname,"./public","contact.html"));
 });
 
 
