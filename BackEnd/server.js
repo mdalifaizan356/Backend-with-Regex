@@ -108,31 +108,58 @@
 
 
 
+// //4th Class Connect DB                
+// const express = require("express");
+// const colors = require("colors");
+// const morgan = require("morgan");
+// const dotenv = require("dotenv").config();
+// const path = require("path");
+// const connectDB = require("./config/db")
+
+// const app =express();
+// const PORT = process.env.PORT||5000
+// // const PORT = 5000;
+
+// connectDB();
+
+
+// app.use(express.json());
+
+// app.get("/", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname,"./public","index.html"));
+// });
+
+
+// app.listen(PORT, ()=>
+//     console.log(`Server running on port number ${PORT}`.blue.bold)
+// );
 
 
 
-//4th Class Connect DB                
+
+//5th Class Schema Design               
 const express = require("express");
 const colors = require("colors");
 const morgan = require("morgan");
 const dotenv = require("dotenv").config();
-const path = require("path");
-const connectDB = require("./config/db")
+const rootroute = require("./routes/rootroute");
+const connectDB = require("./config/db");
 
+
+const PORT = 7000||5000;
+// const PORT = process.env.PORT||5000
 const app =express();
-const PORT = process.env.PORT||5000
-// const PORT = 5000;
-
 connectDB();
 
+app.use(express.json());     //body parser middleware
+app.use(morgan("dev"));
 
-app.use(express.json());
-
-app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname,"./public","index.html"));
-});
-
+app.get("/", rootroute);
 
 app.listen(PORT, ()=>
     console.log(`Server running on port number ${PORT}`.blue.bold)
 );
+
+
+
+47min

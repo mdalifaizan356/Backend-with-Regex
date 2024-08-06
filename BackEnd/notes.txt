@@ -102,3 +102,5 @@ index.js k tukde karne pr react.js kehlata he
 server.js k tukde karne pr MVC architecture kehlata he.
 
 Back end k routes alag honge or frontend routes alag honge.
+
+agar koi object without data he to wo schema kehlata he
